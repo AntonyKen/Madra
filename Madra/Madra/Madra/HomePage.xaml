@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Madra.MarkupExtensions"
+             x:Class="Madra.HomePage"
+             BackgroundColor="#24527B">
+
+    <Grid>
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               BackgroundColor="#24527B"
+               Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
+        <ImageButton Grid.Row="1" Grid.Column="0"
+                     BackgroundColor="#24527B"
+                     Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"/>
+        <ImageButton Grid.Row="1" Grid.Column="1"
+                     BackgroundColor="#24527B"
+                     Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"/>
+        <ImageButton Grid.Row="2" Grid.Column="0"
+                     BackgroundColor="#24527B"
+                     Source="{local:EmbeddedImage Madra.Images.donate.jpg}"
+                     Clicked="donateButton"/>
+        <ImageButton Grid.Row="2" Grid.Column="1"
+                     BackgroundColor="#24527B"
+                     Source="{local:EmbeddedImage Madra.Images.userprofile.png}"/>
+        <Button Grid.Row ="3" Grid.Column="0" Grid.ColumnSpan="2"
+                Text="Create Account"
+                Clicked="createProfileButton"/>
+    </Grid>
+
+</ContentPage>
