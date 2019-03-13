@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madra.Signup"
+             BackgroundColor="#24527B">
+
+    <ScrollView>
+        <Grid RowSpacing="10" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Back" 
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Home" 
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="0" Grid.Column="3" />
+
+            <Label Text="CREATE ACCOUNT" 
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="1" Grid.Column="1"             
+               Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="First Name"
+                   Grid.Row="2" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="firstName"/>
+            
+            <Entry Placeholder="Last Name"
+                   Grid.Row="3" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="lastName"/>
+            
+            <Entry Placeholder="Date Of Birth"
+                   Grid.Row="4" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="dob"/>
+            
+            <Entry Placeholder="Phone Number"
+                   Grid.Row="5" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   MaxLength="10"
+                   x:Name="phoneNumber"/>
+            
+            <Entry Placeholder="Email"
+                   Grid.Row="6" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="email"/>
+            
+            <Entry Placeholder="Password"
+                   Grid.Row="7" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="password"/>
+            
+            <Entry Placeholder="Confirm Password"
+                   Grid.Row="8" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="confirmPassword"/>
+
+            <Button Text="Continue"
+                    Grid.Row="9" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Clicked="continueButton"/>
+
+            <Label Text="Help" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="10" Grid.Column="3"/>
+            
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Madra.MarkupExtensions"
+             x:Class="Madra.StartScreen"
+             BackgroundColor="#24527B">
+    <StackLayout>
+        <ImageButton Source="{local:EmbeddedImage Madra.Images.logo.jpg}"
+                     HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                     HeightRequest="100" WidthRequest="100"
+                     BackgroundColor="#24527B"
+                     Clicked="logoButton"/>
+    </StackLayout>
+
+</ContentPage>
