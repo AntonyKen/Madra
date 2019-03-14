@@ -21,7 +21,8 @@
                      Clicked="donateButton"/>
         <ImageButton Grid.Row="2" Grid.Column="1"
                      BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.userprofile.png}"/>
+                     Source="{local:EmbeddedImage Madra.Images.userprofile.png}"
+                     Clicked="userProfileButton"/>
         <Button Grid.Row ="3" Grid.Column="0" Grid.ColumnSpan="2"
                 Text="Create Account"
                 Clicked="createProfileButton"/>
