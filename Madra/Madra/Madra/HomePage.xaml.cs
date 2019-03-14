@@ -28,5 +28,10 @@ namespace Madra
         {
             await Navigation.PushAsync(new Userprofile());
         }
+
+        private async void adoptButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Adoption());
+        }
     }
 }

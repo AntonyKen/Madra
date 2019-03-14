@@ -11,7 +11,8 @@
                Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
         <ImageButton Grid.Row="1" Grid.Column="0"
                      BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"/>
+                     Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
+                     Clicked="adoptButton"/>
         <ImageButton Grid.Row="1" Grid.Column="1"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"/>
