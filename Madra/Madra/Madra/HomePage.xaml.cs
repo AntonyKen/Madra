@@ -33,5 +33,10 @@ namespace Madra
         {
             await Navigation.PushAsync(new Adoption());
         }
+
+        private async void bookButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Booking());
+        }
     }
 }

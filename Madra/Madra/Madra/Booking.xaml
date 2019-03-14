@@ -1,18 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Madra.Adoption"
-             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"             
+             x:Class="Madra.Booking"
              BackgroundColor="#24527B">
 
     <ScrollView>
         <Grid RowSpacing="10" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -40,51 +35,51 @@
                    TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="3"/>
 
-            <Label Text="Adoption"
+            <Label Text="Walking"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="1" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
 
-            <Label Text="If you do not wish to select a dog now, please click on Continue"
-                   HorizontalOptions="Center"
+            <Label Text="Please Choose a date."
                    TextColor="#FFFFFF"
-                   Grid.Row="2" Grid.Column="1"             
+                   Grid.Row="2" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
-            <controls:CheckBox DefaultText="Dog 1"
-                               HorizontalOptions="Center"              
-                               Grid.Row="3" Grid.Column="1" />
+            <DatePicker DateSelected="DateSelected"
+                        Grid.Row="3" Grid.Column="1"
+                        Grid.ColumnSpan="2"/>
 
-            <controls:CheckBox DefaultText="Dog 2"
-                               HorizontalOptions="Center"
-                               Grid.Row="4" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 3"
-                               HorizontalOptions="Center"
-                               Grid.Row="5" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 4"
-                               HorizontalOptions="Center"
-                               Grid.Row="6" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 5"
-                               HorizontalOptions="Center"
-                               Grid.Row="7" Grid.Column="1" />
-
-            <Button Text="Continue"
-                    Grid.Row="8" Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    TextColor="#FFFFFF"
-                    BackgroundColor="#3D75AB"
-                    Clicked="continueButton"/>
-
-            <Label Text="Help" 
+            <Label Text="Please Choose a time slot."
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="10" Grid.Column="3" />
-        
+                   Grid.Row="4" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="TimeSlot"
+                    SelectedIndexChanged="timeSelected"
+                    Grid.Row="5" Grid.Column="1"
+                    Grid.ColumnSpan="2"/>
+
+            <Button Text="Continue" Clicked="continueBookingButton"
+                    Grid.Row="6" Grid.Column="1" 
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="Calender"
+                   Grid.Row="7" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="#FFFFFF"/>
+
+            <Label x:Name="Time"
+                   Grid.Row="8" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="#FFFFFF"/>
+
+            <Label Text="Help"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="9" Grid.Column="3" />
+
         </Grid>
     </ScrollView>
-
 </ContentPage>
