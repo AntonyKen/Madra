@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madra.Adoption"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:ia="clr-namespace:IntelliAbb.Xamarin.Controls;assembly=IntelliAbb.Xamarin.Controls"
+             BackgroundColor="#24527B">
+
+    <ScrollView>
+        <Grid RowSpacing="10" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Back" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Home" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="3"/>
+
+            <Label Text="Adoption"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="1" Grid.Column="1"             
+                   Grid.ColumnSpan="2"/>
+
+            <Label Text="If you do not wish to select a dog now, please click on Continue"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="2" Grid.Column="1"             
+                   Grid.ColumnSpan="2"
+                   FontSize="Micro"/>
+
+            <Label Text="Info about dog"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="3" Grid.Column="1"             
+                   Grid.ColumnSpan="2"/>
+
+            <controls:CheckBox HorizontalOptions="Center"
+               Grid.Row="3" Grid.Column="4" />
+
+
+            <Label Text="Info about dog"
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="4" Grid.Column="1"             
+               Grid.ColumnSpan="2"/>
+            <controls:CheckBox HorizontalOptions="Center"
+               Grid.Row="4" Grid.Column="4" />
+
+
+
+
+            <Label Text="Info about dog"
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="5" Grid.Column="1"             
+               Grid.ColumnSpan="2"/>
+            <controls:CheckBox HorizontalOptions="Center"
+               Grid.Row="5" Grid.Column="4" />
+
+
+
+            <Label Text="Info about dog"
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="6" Grid.Column="1"             
+               Grid.ColumnSpan="2"/>
+            <controls:CheckBox HorizontalOptions="Center"
+               Grid.Row="6" Grid.Column="4" />
+
+
+
+            <Label Text="Info about dog"
+               HorizontalOptions="Center"
+               TextColor="#FFFFFF"
+               Grid.Row="7" Grid.Column="1"             
+               Grid.ColumnSpan="2"/>
+            <controls:CheckBox HorizontalOptions="Center"
+               Grid.Row="7" Grid.Column="4" />
+
+
+
+            <Button Text="Continue"
+                Grid.Row="9" Grid.Column="1"
+                Grid.ColumnSpan="2"
+                TextColor="#FFFFFF"
+                BackgroundColor="#3D75AB" 
+                     Clicked="ContinueButton_OnClicked"/>
+
+            <Label Text="Help" 
+            HorizontalOptions="Center"
+            TextColor="#FFFFFF"
+            Grid.Row="10" Grid.Column="3" />
+        
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
