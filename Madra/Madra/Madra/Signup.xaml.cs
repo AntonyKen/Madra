@@ -20,6 +20,9 @@ namespace Madra
 
         private async void continueButton(object sender, EventArgs e)
         {
+            await DisplayAlert("Profile Created", "Please login with your credentials.", "Okay");
+            await Navigation.PushAsync(new Login());
+
             string fName = firstName.Text;
             string lName = lastName.Text;
             string dateOfBirth = dob.Text;
@@ -53,6 +56,9 @@ namespace Madra
                     content = new System.Net.Http.FormUrlEncodedContent(postData2);
                     response = await client.PostAsync("Http://10.0.2.2:80/databaseConnection.php", content);
                     result = response.Content.ReadAsStringAsync().Result;
+
+
+                    
                 }
                 else
                 {
@@ -66,6 +72,8 @@ namespace Madra
                 //test.Text = "ERROR";
                 return;
             }
+
+            
 
             //string values = email + "," + pwd;
             //this.db.insertData("app_user", "email, app_password", values);

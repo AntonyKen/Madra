@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Madra.MarkupExtensions"
+             x:Class="Madra.Login"
+             BackgroundColor="#24527B">
+
+    <ScrollView>
+        <Grid RowSpacing="10" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Back" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Home" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="3" />
+
+            <Image BackgroundColor="#24527B"
+                   Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"
+                   Grid.Row="1" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="Email"
+                   Grid.Row="3" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="email"/>
+            <Entry Placeholder="Password"
+                   Grid.Row="4" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="password"/>
+
+            <Button Text="Login"
+                    Grid.Row="5" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Clicked="loginButton"/>
+
+            <Label Text="Help" 
+                   TextColor="#FFFFFF"
+                   Grid.Row="6" Grid.Column="3" />
+
+            <Button Text="Forgot Password"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Grid.Row="7" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Clicked="forgotButton" />
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
