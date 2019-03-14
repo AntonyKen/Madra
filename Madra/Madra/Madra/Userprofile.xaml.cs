@@ -16,5 +16,21 @@ namespace Madra
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void updateButton(object sender, EventArgs e)
+        {
+            DisplayAlert("Updated", "Your details have been updated.", "Okay");
+        }
+
+        private async void deleteButton(object sender, EventArgs e)
+        {
+            var response = await DisplayAlert("Confirmation", "Do you want to delete your account?", "Yes", "No");
+            if (response == true)
+            {
+               var response2 = DisplayAlert("Alert","Your account has been deleted.","Okay");
+               
+               await Navigation.PushAsync(new HomePage());
+            }
+        }
+    }
 }

@@ -23,5 +23,10 @@ namespace Madra
         {
             await Navigation.PushAsync(new Donations());
         }
+
+        private async void userProfileButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Userprofile());
+        }
     }
 }
