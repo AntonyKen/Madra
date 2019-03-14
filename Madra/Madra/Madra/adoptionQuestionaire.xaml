@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madra.adoptionQuestionaire"
+             BackgroundColor="#24527B">
+    
+    <ScrollView>
+        <Grid RowSpacing="10" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Back" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Home" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="3"/>
+
+            <Label Text="Adoption" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1" Grid.Column="1"/>
+
+            <Entry Placeholder="Address"
+                   FontSize="Micro"
+                   Grid.Row="2" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="address"/>
+
+            <Entry Placeholder="Number of children with their ages."
+                   FontSize="Micro"
+                   Grid.Row="3" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="children"/>
+
+            <Entry Placeholder="Kind of accomodation"
+                   FontSize="Micro"
+                   Grid.Row="4" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="accomodation"/>
+
+            <Entry Placeholder="Interested breeds"
+                   FontSize="Micro"
+                   Grid.Row="5" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   MaxLength="10"
+                   x:Name="intBreeds"/>
+
+            <Entry Placeholder="Number of people in your home"
+                   FontSize="Micro"
+                   Grid.Row="6" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="numberOfPeople"/>
+
+            <Entry Placeholder="Do you have a fenced yard?"
+                   FontSize="Micro"
+                   Grid.Row="7" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="fencedYard"/>
+
+            <Entry Placeholder="Reason for adoption"
+                   FontSize="Micro"
+                   Grid.Row="8" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="reasonForAdoption"/>
+
+            <Button Text="Adopt"
+                    Grid.Row="9" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB" 
+                    Clicked="adoptButton"/>
+
+            <Label Text="Help" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="10" Grid.Column="3" />
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="Madra.ConfirmBooking"
+             BackgroundColor="#24527B">
+    
+    <ScrollView>
+        <Grid RowSpacing="10" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Back" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Home" 
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="3" />
+
+            <Label Text="Confirm Time Slot"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="1" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="Address"
+                   Grid.Row="2" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   FontSize="Micro"
+                   x:Name="address"/>
+
+            <Entry Placeholder="Number attending"
+                   Grid.Row="3" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   FontSize="Micro"
+                   x:Name="numberAttending"/>
+            
+            <controls:CheckBox DefaultText="Please select if there would be any individuals under 16"
+                               HorizontalOptions="Center"                  
+                               Grid.Row="4" Grid.Column="1"
+                               Grid.ColumnSpan="2"/>
+
+            <Button Text="Confirm"
+                    Grid.Row="7" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Clicked="confirmBookingButton"/>
+
+            <Label Text="Help"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="8" Grid.Column="3" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

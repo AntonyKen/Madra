@@ -16,5 +16,15 @@ namespace Madra
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void continueButton(object sender, EventArgs e)
+        {
+            var response = await DisplayAlert("Confirmation", "Would you like to proceed with the selected dogs?", "Yes", "No");
+
+            if (response == true)
+            {
+                await Navigation.PushAsync(new adoptionQuestionaire());
+            }
+        }
+    }
 }

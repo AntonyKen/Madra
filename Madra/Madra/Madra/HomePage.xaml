@@ -15,7 +15,8 @@
                      Clicked="adoptButton"/>
         <ImageButton Grid.Row="1" Grid.Column="1"
                      BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"/>
+                     Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"
+                     Clicked="bookButton"/>
         <ImageButton Grid.Row="2" Grid.Column="0"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.donate.jpg}"
