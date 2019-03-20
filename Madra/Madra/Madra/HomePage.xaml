@@ -6,10 +6,10 @@
              BackgroundColor="#24527B">
 
     <Grid>
-        <Label x:Name="test"/>
-        <!--<Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+        <!--<Label x:Name="test"/>-->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                BackgroundColor="#24527B"
-               Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>-->
+               Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
         <ImageButton Grid.Row="1" Grid.Column="0"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
