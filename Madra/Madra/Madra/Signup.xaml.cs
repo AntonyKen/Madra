@@ -38,8 +38,6 @@ namespace Madra
             string pWord = password.Text;
             string confirmPwd = confirmPassword.Text;
 
-            //TODO: check for -> only numbers in phone
-
             if (string.IsNullOrEmpty(fName) || string.IsNullOrEmpty(lName) || string.IsNullOrEmpty(dateOfBirth) || 
                 string.IsNullOrEmpty(pNumber) || string.IsNullOrEmpty(emailid) || string.IsNullOrEmpty(pWord) ||
                 string.IsNullOrEmpty(confirmPwd))
