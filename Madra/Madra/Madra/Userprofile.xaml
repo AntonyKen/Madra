@@ -61,7 +61,7 @@
                    Grid.ColumnSpan="2"
                    MaxLength="10"
                    x:Name="phoneNumber"/>
-            <Entry Placeholder="Password"
+            <!--<Entry Placeholder="Password"
                    Grid.Row="6" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    IsPassword="True"
@@ -70,7 +70,7 @@
                    Grid.Row="7" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    IsPassword="True"
-                   x:Name="confirmPassword"/>
+                   x:Name="confirmPassword"/>-->
 
             <Button Text="Update"
                     Grid.Row="9" Grid.Column="1"
@@ -78,6 +78,13 @@
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
                     Clicked="updateButton"/>
+            
+            <Button Text="Log out"
+                    Grid.Row="10" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Clicked="logoutButton"/>
 
             <Label Text="Help" 
                    HorizontalOptions="Center"
@@ -87,7 +94,7 @@
             <Button Text="Delete Account" 
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
-                    Grid.Row="10" Grid.Column="1"
+                    Grid.Row="11" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Clicked="deleteButton"/>
 

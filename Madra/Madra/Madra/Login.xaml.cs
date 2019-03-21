@@ -63,7 +63,6 @@ namespace Madra
                 {
                     await DisplayAlert("Error", "The email is incorrect", "Ok");
                 }
-
                 
             } else
             {
@@ -82,11 +81,5 @@ namespace Madra
         {
             UserSettings.Email = userEmail;
         }
-
-        public static string getUser()
-        {
-            return UserSettings.Email;
-        }
-
     }
 }
