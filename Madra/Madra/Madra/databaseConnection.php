@@ -55,7 +55,10 @@
   }
 
   if($action == 'delete') {
-
+  
+    $sql = "DELETE FROM " . $_POST['from'] . " WHERE " . $_POST['where'] . ";";
+    $result = mysqli_query($connection, $sql);
+    $connection->close();
   }
 
 ?>

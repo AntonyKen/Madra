@@ -22,18 +22,6 @@ namespace Madra.Helper
             set => AppSettings.AddOrUpdateValue(nameof(Email), value);
         }
 
-        //public static string Password
-        //{
-        //    get => AppSettings.GetValueOrDefault(nameof(Password), string.Empty);
-        //    set => AppSettings.AddOrUpdateValue(nameof(Password), value);
-        //}
-
-        //public static string MobileNumber
-        //{
-        //    get => AppSettings.GetValueOrDefault(nameof(MobileNumber), string.Empty);
-        //    set => AppSettings.AddOrUpdateValue(nameof(MobileNumber), value);
-        //}
-
         public static void ClearAllData()
         {
             AppSettings.Clear();

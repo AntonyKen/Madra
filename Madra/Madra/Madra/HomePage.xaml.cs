@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Madra.Helper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,9 +77,12 @@ namespace Madra
 
         private async void userProfileButton(object sender, EventArgs e)
         {
-            //TODO: if not logge in go to login
-            await Navigation.PushAsync(new Login());
-            //await Navigation.PushAsync(new Userprofile());
+            if(string.IsNullOrEmpty(getUser()))
+            {
+                await Navigation.PushAsync(new Login());
+            } else {
+                await Navigation.PushAsync(new Userprofile());
+            }            
         }
 
         private async void adoptButton(object sender, EventArgs e)
@@ -89,6 +93,11 @@ namespace Madra
         private async void bookButton(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Booking());
+        }
+
+        public static string getUser()
+        {
+            return UserSettings.Email;
         }
     }
 }
