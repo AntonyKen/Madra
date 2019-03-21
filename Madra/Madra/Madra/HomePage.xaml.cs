@@ -64,6 +64,8 @@ namespace Madra
             //    test.Text = "ERROR";
             //    return;
             //}
+
+
             await Navigation.PushAsync(new Signup());
         }
 
@@ -74,7 +76,9 @@ namespace Madra
 
         private async void userProfileButton(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Userprofile());
+            //TODO: if not logge in go to login
+            await Navigation.PushAsync(new Login());
+            //await Navigation.PushAsync(new Userprofile());
         }
 
         private async void adoptButton(object sender, EventArgs e)
