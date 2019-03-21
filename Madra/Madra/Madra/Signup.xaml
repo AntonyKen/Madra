@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              x:Class="Madra.Signup"
              BackgroundColor="#24527B">
 
@@ -54,16 +55,18 @@
                    Grid.Row="3" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    x:Name="lastName"/>
-            
-            <Entry Placeholder="Date Of Birth"
-                   Grid.Row="4" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="dob"/>
-            
+
+            <DatePicker DateSelected="newdate"
+                        x:Name="dob"
+                        Date="{x:Static system:DateTime.Today}"
+                        Grid.Row="4" Grid.Column="1"
+                        Grid.ColumnSpan="2"/>
+
             <Entry Placeholder="Phone Number"
                    Grid.Row="5" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    MaxLength="10"
+                   Keyboard="Numeric"
                    x:Name="phoneNumber"/>
             
             <Entry Placeholder="Email"

@@ -15,17 +15,24 @@ namespace Madra
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Signup : ContentPage
 	{
+        string dobString;
+
 		public Signup ()
 		{
 			InitializeComponent ();
 		}
+        
+        private void newdate(object sender, DateChangedEventArgs e)
+        {
+            dobString = e.NewDate.ToString("yyyy-MM-dd");         
+        }
 
         private async void continueButton(object sender, EventArgs e)
         {
             DBConnection connection = new DBConnection();
             string fName = firstName.Text;
             string lName = lastName.Text;
-            string dateOfBirth = dob.Text;
+            string dateOfBirth = dobString;
             string pNumber = phoneNumber.Text;
             string emailid = email.Text;
             string pWord = password.Text;
@@ -84,5 +91,6 @@ namespace Madra
                 return false;
             }
         }
+
     }
 }
