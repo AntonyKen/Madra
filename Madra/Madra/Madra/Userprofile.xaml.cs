@@ -16,8 +16,8 @@ namespace Madra
 	{
         private DBConnection conn;
         private string user;
+        private string dateOfBirth = "";
         //TODO: allow password change!
-        //TODO: change dob to datepicker
 
 		public Userprofile ()
 		{
@@ -42,22 +42,26 @@ namespace Madra
             Dictionary<string, string> value = values[0];
             fName.Text = value["first_name"];
             lName.Text = value["last_name"];
-            dob.Text = value["date_of_birth"];
+            dob.Date = Convert.ToDateTime(value["date_of_birth"]);
             phoneNumber.Text = value["phone_number"];
+        }
+
+        private void newdate(object sender, DateChangedEventArgs e)
+        {
+            dateOfBirth = "date_of_birth = '" + e.NewDate.ToString("yyyy-MM-dd") + "',";
         }
 
         private async void updateButton(object sender, EventArgs e)
         {
             string fname = fName.Text;
             string lname = lName.Text;
-            string dateOfBirth = dob.Text;
             string pNumber = phoneNumber.Text;
             
             var data = new List<KeyValuePair<string, string>>();
             data.Add(new KeyValuePair<string, string>("action", "update"));
             data.Add(new KeyValuePair<string, string>("table", "app_user"));
             data.Add(new KeyValuePair<string, string>("update", "first_name = '" + fname + "', last_name = '" + lname + "', " +
-                "date_of_birth = '" + dateOfBirth + "', phone_number = '" + pNumber + "'"));
+                dateOfBirth + " phone_number = '" + pNumber + "'"));
             data.Add(new KeyValuePair<string, string>("where", "email = '" + user + "'"));
 
             await conn.doDBConnection(data);
@@ -86,8 +90,8 @@ namespace Madra
                 await conn.doDBConnection(getDeleteList("walking"));
 
                 await DisplayAlert("Alert","Your account has been deleted.","Okay");
-               
                 await Navigation.PushAsync(new HomePage());
+                UserSettings.ClearAllData();
             }
         }
 
