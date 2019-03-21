@@ -52,10 +52,10 @@
                    Grid.Row="3" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    x:Name="lName"/>
-            <Entry Placeholder="Date Of Birth"
-                   Grid.Row="4" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="dob"/>
+            <DatePicker DateSelected="newdate"
+                        x:Name="dob"
+                        Grid.Row="4" Grid.Column="1"
+                        Grid.ColumnSpan="2"/>
             <Entry Placeholder="Phone Number"
                    Grid.Row="5" Grid.Column="1"
                    Grid.ColumnSpan="2"
