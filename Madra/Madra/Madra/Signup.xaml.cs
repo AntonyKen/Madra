@@ -15,13 +15,24 @@ namespace Madra
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Signup : ContentPage
 	{
-        string dobString;
+        string dobString;       
 
 		public Signup ()
 		{
 			InitializeComponent ();
-		}
-        
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
+        }
+
         private void newdate(object sender, DateChangedEventArgs e)
         {
             dobString = e.NewDate.ToString("yyyy-MM-dd");         
