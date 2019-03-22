@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Class="Madra.adoptionQuestionaire"
              BackgroundColor="#24527B">
     
@@ -45,50 +46,79 @@
                    Grid.ColumnSpan="2"
                    Grid.Row="1" Grid.Column="1"/>
 
-            <Entry Placeholder="Address"
+            <Entry Placeholder=" Street Address"
                    FontSize="Micro"
                    Grid.Row="2" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    x:Name="address"/>
 
-            <Entry Placeholder="Number of children with their ages."
+            <Entry Placeholder="Please enter your County."
                    FontSize="Micro"
                    Grid.Row="3" Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   x:Name="children"/>
+                   x:Name="County"/>
 
-            <Entry Placeholder="Kind of accomodation"
+            <Entry Placeholder="Any other directions you have for home check."
                    FontSize="Micro"
                    Grid.Row="4" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    x:Name="accomodation"/>
 
-            <Entry Placeholder="Interested breeds"
-                   FontSize="Micro"
+            <controls:CheckBox DefaultText ="Please check if you are interested in certain breeds"
                    Grid.Row="5" Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   MaxLength="10"
                    x:Name="intBreeds"/>
 
-            <Entry Placeholder="Number of people in your home"
+            <Entry Placeholder="Please enter Breeds."
                    FontSize="Micro"
                    Grid.Row="6" Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   x:Name="numberOfPeople"/>
+                   x:Name="Breeds"/>
 
-            <Entry Placeholder="Do you have a fenced yard?"
-                   FontSize="Micro"
+            <controls:CheckBox DefaultText ="Please check if you are interested in certain dogs."
                    Grid.Row="7" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   IsPassword="True"
-                   x:Name="fencedYard"/>
+                   Grid.ColumnSpan="2"  
+                   x:Name="certainDog"/>
 
-            <Entry Placeholder="Reason for adoption"
+            <Entry Placeholder="Please enter the Dog's names"
                    FontSize="Micro"
                    Grid.Row="8" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    IsPassword="True"
-                   x:Name="reasonForAdoption"/>
+                   x:Name="dogNames"/>
+
+            <Entry Placeholder="How many people live in your household?"
+                   FontSize="Micro"
+                   Grid.Row="9" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="dogNames"/>
+
+            <controls:CheckBox DefaultText ="Check if the dog will be in contact or living with children?"
+                   Grid.Row="10" Grid.Column="1"
+                   Grid.ColumnSpan="2"  
+                   x:Name="liveWithChildren"/>
+
+            <Entry Placeholder="If yes how old are tehy?"
+                   FontSize="Micro"
+                   Grid.Row="11" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="True"
+                   x:Name="ageOfChild"/>
+
+            <Label Text="What Kind of accommodation do you have>"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="12" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="accommodation"
+                    SelectedIndexChanged="Accommodation"
+                    Grid.Row="5" Grid.Column="1"
+                    Grid.ColumnSpan="2"/>
+
+
+
 
             <Button Text="Adopt"
                     Grid.Row="9" Grid.Column="1"
