@@ -28,7 +28,8 @@
                      Clicked="userProfileButton"/>
         <Button Grid.Row ="3" Grid.Column="0" Grid.ColumnSpan="2"
                 Text="Create Account"
-                Clicked="createProfileButton"/>
+                Clicked="createProfileButton"
+                x:Name="createProfile"/>
     </Grid>
 
 </ContentPage>

@@ -36,8 +36,6 @@ namespace Madra
 
             string result = await conn.doDBConnection(data);
 
-            dynamic dbData = JsonConvert.DeserializeObject(result);
-
             Dictionary<int, Dictionary<string, string>> values = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(result);
             Dictionary<string, string> value = values[0];
             fName.Text = value["first_name"];
