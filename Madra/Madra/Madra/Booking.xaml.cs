@@ -15,6 +15,7 @@ namespace Madra
     public partial class Booking : ContentPage
     {
         string selectedDate;
+        DateTime checkDay;
         List<string> weekdays = new List<string>();
 
         public Booking()
@@ -34,9 +35,25 @@ namespace Madra
         {
             selectedDate = e.NewDate.ToString("yyyy-MM-dd");
 
-            //Calender.Text = "Date: " + e.NewDate.ToString();
-            Calender.Text = weekdays[0];
+            checkDay = DateTime.Parse(selectedDate);
 
+            bool checker = false;
+
+            await DisplayAlert("test", checkDay.ToString("dddd"), "okay");
+
+            for (int i = 0; i < weekdays.Count; i++)
+            {
+                if(Equals(checkDay.ToString("dddd"), weekdays[i]))
+                {
+                    checker = true;
+                }                                           
+            }
+
+            if (checker == false)
+            {
+                await DisplayAlert("Unavailable", "We are not open on " + checkDay.ToString("dddd") + " for walking. Please select another day. Scroll down to see the list of available days.", "Okay");
+            }
+            
         }
 
         private async void continueBookingButton(object sender, EventArgs e)
@@ -47,7 +64,7 @@ namespace Madra
         private void timeSelected(object sender, EventArgs e)
         {
             var time = TimeSlot.Items[TimeSlot.SelectedIndex];
-            Time.Text = "Time " + time;
+            //Time.Text = "Time " + time;
         }      
         
         private async void getSettings()
@@ -65,23 +82,16 @@ namespace Madra
 
             Dictionary<int, Dictionary<string, string>> values = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(result);
 
-
             for(int i = 0; i < values.Count; i++)
             {
                 Dictionary<string, string> value = values[i];
                 weekdays.Add(value["weekday"]);
             }
 
-            //foreach (var row in values)
-            //{
-            //    weekdays.Add(row["weekday"]);
-
-            //    foreach (var innervalue in row.Value)
-            //    {
-            //        weekdays.Add(innervalue["weekday"]);
-            //    }
-
-            //}
+            for (int i = 0; i < weekdays.Count; i++)
+            {
+                Calender.Text = Calender.Text + "\r\n" + weekdays[i];
+            }
         }
     }
 }    
