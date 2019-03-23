@@ -69,26 +69,26 @@
                     Grid.Row="6" Grid.Column="1" 
                     Grid.ColumnSpan="2"/>
 
-            <!--<button text="check"
-                    clicked="checkbutton"
-                    grid.row="7" grid.column="1" 
-                    grid.columnspan="2"/>-->
-
-
-            <Label x:Name="Calender"
+            <Label Text="Available days:"
                    Grid.Row="7" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    TextColor="#FFFFFF"/>
-
-            <Label x:Name="Time"
+            
+            <Label x:Name="Calender"
                    Grid.Row="8" Grid.Column="1"
                    Grid.ColumnSpan="2"
+                   Grid.RowSpan="4"
                    TextColor="#FFFFFF"/>
+
+            <!--<Label x:Name="Time"
+                   Grid.Row="11" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="#FFFFFF"/>-->
 
             <Label Text="Help"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="9" Grid.Column="3" />
+                   Grid.Row="12" Grid.Column="3" />
 
         </Grid>
     </ScrollView>
