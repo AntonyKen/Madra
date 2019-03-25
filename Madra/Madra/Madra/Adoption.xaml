@@ -53,26 +53,6 @@
                    Grid.Row="2" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
 
-                <!--<controls:CheckBox DefaultText="Dog 1"
-                               HorizontalOptions="Center"              
-                               Grid.Row="3" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 2"
-                               HorizontalOptions="Center"
-                               Grid.Row="4" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 3"
-                               HorizontalOptions="Center"
-                               Grid.Row="5" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 4"
-                               HorizontalOptions="Center"
-                               Grid.Row="6" Grid.Column="1" />
-
-            <controls:CheckBox DefaultText="Dog 5"
-                               HorizontalOptions="Center"
-                               Grid.Row="7" Grid.Column="1" />-->
-
                 <Button Text="Continue"
                     Grid.Row="8" Grid.Column="1"
                     Grid.ColumnSpan="2"

@@ -46,7 +46,7 @@ namespace Madra
                     {
                         var lab = new Label()
                         {
-                            Text = dog.Value,
+                            Text = getName(dog.Value),
                             TextColor = Color.White,
                             HorizontalOptions = LayoutOptions.Center
                         };
@@ -59,7 +59,8 @@ namespace Madra
                         Image image = new Image();
                         image.Source = ImageSource.FromStream(() => new MemoryStream(getImage));
                         TapGestureRecognizer tgr = new TapGestureRecognizer();
-                        tgr.Tapped += getDogDetail;
+                        tgr.Command = new Command<string>(getDogDetail);
+                        tgr.CommandParameter = dog.Value;
                         image.GestureRecognizers.Add(tgr);
                         dogsView.Children.Add(image);
                     }                    
@@ -67,21 +68,29 @@ namespace Madra
             }
         }
 
-        private async void getDogDetail(object sender, EventArgs e)
+        public string getName(string name)
         {
-            await DisplayAlert("Test", "Test", "OK");
+            if (name.Contains("pup") || name.Contains("Pup"))
+            {
+                string[] split = name.Split('-');
+                return split[1];
+            }
+            return name;
+        }
+        
+        private async void getDogDetail(string id)
+        {
+            await Navigation.PushAsync(new DogInformation(id));
         }
 
         private async void continueButton(object sender, EventArgs e)
         {
+            var response = await DisplayAlert("Confirmation", "Would you like to proceed without selecting a specific dog?", "Yes", "No");
 
-
-            var response = await DisplayAlert("Confirmation", "Would you like to proceed with the selected dogs?", "Yes", "No");
-
-                //if (response == true)
-                //{
-                //    //await Navigation.PushAsync(new adoptionQuestionaire());
-                //}
+            if (response == true)
+            { 
+                await Navigation.PushAsync(new adoptionQuestionaire());
+            }
         }
     }
 }

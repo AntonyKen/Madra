@@ -14,6 +14,7 @@ namespace Madra.Helper
         private string BASE_URL = "https://service.sheltermanager.com/asmservice";
         private string ADOPTABLE_DOGS = "?method=json_adoptable_animals";
         private string DOG_IMG = "?method=animal_thumbnail&animalid=";
+        private string DOG_INFO = "?method=json_adoptable_animal&animalid=";
 
         public Dogs()
         {
@@ -26,6 +27,21 @@ namespace Madra.Helper
             try
             {
                 var response = await client.GetAsync(BASE_URL + ADOPTABLE_DOGS + ACCOUNT_SETTINGS);
+
+                //TODO: make if else statement if no dog was found?
+                return response.Content.ReadAsStringAsync().Result;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<string> getDog(string id)
+        {
+            try
+            {
+                var response = await client.GetAsync(BASE_URL + DOG_INFO + id + ACCOUNT_SETTINGS);
 
                 //TODO: make if else statement if no dog was found?
                 return response.Content.ReadAsStringAsync().Result;
