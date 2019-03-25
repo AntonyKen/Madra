@@ -108,6 +108,22 @@ namespace Madra
             HouseTrain.Items.Add("Nearly There");
             HouseTrain.Items.Add("Start from Scratch");
 
+            //yes or no to agree to terms of MADRA
+            AgreeMent.Items.Add("Yes");
+            AgreeMent.Items.Add("No");
+
+            //yes or no living with children
+            LiveChildren.Items.Add("Yes");
+            LiveChildren.Items.Add("No");
+
+            //yes or no to certain dogs
+            CertainDogs.Items.Add("Yes");
+            CertainDogs.Items.Add("No");
+
+            //yes or no to certain breeds
+            CertainBreeds.Items.Add("Yes");
+            CertainBreeds.Items.Add("No");
+
 
 
 
@@ -134,75 +150,96 @@ namespace Madra
         private void accommodationSelected(object sender, EventArgs e)
         {
             var accommodation1 = accommodation.Items[accommodation.SelectedIndex];
-            Accommodation.Text = "Accommodation" + accommodation1;
+            
         }
 
         //drop down menu opening when clicked upon for whether they own their home
         private void OwnhomeSelected(object sender, EventArgs e)
         {
             var ownHome = ownhome.Items[ownhome.SelectedIndex];
-            OwnHome.Text = "Accommodation" + ownHome;
+         
         }
 
         private void WhosResponsibleSelected(object sender, EventArgs e)
         {
             var whoResponsible = WhosResponsible.Items[WhosResponsible.SelectedIndex];
-            ResponsibleForDog.Text = "Responsibility" + whoResponsible;
+            
         }
 
         private void EnergyLevelSelected(object sender, EventArgs e)
         {
             var energy = Energy.Items[Energy.SelectedIndex];
-            EnergyLevel.Text = "Energy Level" + energy;
+            
         }
 
         private void AgeSelected(object sender, EventArgs e)
         {
             var age = Age.Items[Age.SelectedIndex];
-            AgeofDog.Text = "Age" + age;
+            
         }
 
         private void SizeSelected(object sender, EventArgs e)
         {
             var size = Size.Items[Size.SelectedIndex];
-            SizeofDog.Text = "Size" + size;
+            
         }
 
         private void CoatSelected(object sender, EventArgs e)
         {
             var coat = Coat.Items[Coat.SelectedIndex];
-            CoatofDog.Text = "Coat Type" + coat;
+            
         }
 
         private void GroomSelected(object sender, EventArgs e)
         {
             var groom = Groom.Items[Groom.SelectedIndex];
-            GroomingofDog.Text = "Grooming Type" + groom;
+         
         }
 
         private void TrainSelected(object sender, EventArgs e)
         {
             var train = Train.Items[Train.SelectedIndex];
-            LevelofTrain.Text = "Training Type" + Train;
+            
 
         }
 
         private void ActiveSelected(object sender, EventArgs e)
         {
             var active = Active.Items[Active.SelectedIndex];
-            LevelofActive.Text = "Active Type" + active;
+           
         }
 
         private void SpendTimeSelected(object sender, EventArgs e)
         {
             var spendtime = SpendTime.Items[SpendTime.SelectedIndex];
-            SpendtheirTime.Text = "Spend their Time" + spendtime;
+           
         }
 
         private void HouseTrainSelected(object sender, EventArgs e)
         {
             var housetrain = HouseTrain.Items[HouseTrain.SelectedIndex];
-            HouseTrained.Text = "House Training" + housetrain;
+           
+        }
+
+        private void AgreementSelected(object sender, EventArgs e)
+        {
+            var agreement = AgreeMent.Items[AgreeMent.SelectedIndex];
+
+        }
+
+        private void ChildrenSelected(object sender, EventArgs e)
+        {
+            var children = LiveChildren.Items[LiveChildren.SelectedIndex];
+        }
+
+        private void CertainBreedsSelected(object sender, EventArgs e)
+        {
+            var certainbreeds = CertainBreeds.Items[CertainBreeds.SelectedIndex];
+        }
+
+        private void CertainDogsSelected(object sender, EventArgs e)
+        {
+            var certaindogs = CertainDogs.Items[CertainDogs.SelectedIndex];
         }
     }
 }
