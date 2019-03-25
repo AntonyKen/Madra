@@ -3,42 +3,95 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Madra.DogInformation"  BackgroundColor="#24527B">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="dogDetailPage">
 
             <Label Text="Dog Information"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
+                   TextColor="#FFFFFF"/>
 
-            <Image Source="DogPic.jpg"/>
+            <Image x:Name="dogImage"/>
 
-            <Label Text="Name"
+            <Grid RowSpacing="10" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                   Text="Name: "
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
-
-            <Label Text="Age"
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="0" />
+                <Label x:Name="dogName"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
+                   TextColor="#FFFFFF"
+                   Grid.Row="0" Grid.Column="1"/>
 
-            <Label Text="Breed"
+                <Label
+                   Text="Age: "
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
-
-            <Label Text="Size"
+                   TextColor="#FFFFFF"
+                   Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="dogAge"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
+                   TextColor="#FFFFFF"
+                   Grid.Row="1" Grid.Column="1"/>
 
-            <Label Text="Neutered"
+                <Label
+                   Text="Breed: "
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
-
-            <Label Text="Sex"
+                   TextColor="#FFFFFF"
+                   Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="dogBreed"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                   TextColor="FFFFFF"/>
+                   TextColor="#FFFFFF"
+                   Grid.Row="2" Grid.Column="1"/>
 
+                <Label
+                   Text="Size: "
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="3" Grid.Column="0"/>
+                <Label x:Name="dogSize"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="3" Grid.Column="1"/>
 
+                <Label
+                   Text="Neutered: "
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="4" Grid.Column="0"/>
+                <Label x:Name="dogNeutered"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="4" Grid.Column="1"/>
 
+                <Label
+                   Text="Gender: "
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="5" Grid.Column="0"/>
+                <Label x:Name="dogSex"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="#FFFFFF"
+                   Grid.Row="5" Grid.Column="1"/>
 
+            </Grid>
 
+            <Button Text="Adopt"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#3D75AB"
+                    Clicked="adoptButton"/>
 
         </StackLayout>
     </ContentPage.Content>
