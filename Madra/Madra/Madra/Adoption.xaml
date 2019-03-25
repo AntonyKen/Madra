@@ -6,53 +6,54 @@
              BackgroundColor="#24527B">
 
     <ScrollView>
-        <Grid RowSpacing="10" Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+        <StackLayout>
+            <Grid RowSpacing="10" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-            <Label Text="Back" 
+                <Label Text="Back" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="0" />
 
-            <Label Text="Home" 
+                <Label Text="Home" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="3"/>
 
-            <Label Text="Adoption"
+                <Label Text="Adoption"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="1" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
 
-            <Label Text="If you do not wish to select a dog now, please click on Continue"
+                <Label Text="If you do not wish to select a dog now, please click on Continue"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="2" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
 
-            <controls:CheckBox DefaultText="Dog 1"
+                <!--<controls:CheckBox DefaultText="Dog 1"
                                HorizontalOptions="Center"              
                                Grid.Row="3" Grid.Column="1" />
 
@@ -70,21 +71,25 @@
 
             <controls:CheckBox DefaultText="Dog 5"
                                HorizontalOptions="Center"
-                               Grid.Row="7" Grid.Column="1" />
+                               Grid.Row="7" Grid.Column="1" />-->
 
-            <Button Text="Continue"
+                <Button Text="Continue"
                     Grid.Row="8" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
                     Clicked="continueButton"/>
 
-            <Label Text="Help" 
+                <Label Text="Help" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="10" Grid.Column="3" />
-        
-        </Grid>
-    </ScrollView>
 
+            </Grid>
+            <StackLayout x:Name="dogsView">
+
+            </StackLayout>
+        </StackLayout>      
+            
+    </ScrollView>
 </ContentPage>

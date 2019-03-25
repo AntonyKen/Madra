@@ -39,8 +39,6 @@ namespace Madra
                 {
                     string enteredPwd = "";
 
-                    dynamic dbData = JsonConvert.DeserializeObject(result);
-
                     Dictionary<int, Dictionary<string, string>> values = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(result);
                     foreach (var row in values)
                     {
