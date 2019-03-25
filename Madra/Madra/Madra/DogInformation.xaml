@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madra.DogInformation"  BackgroundColor="#24527B">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Dog Information"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Image Source="DogPic.jpg"/>
+
+            <Label Text="Name"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Label Text="Age"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Label Text="Breed"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Label Text="Size"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Label Text="Neutered"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+            <Label Text="Sex"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   TextColor="FFFFFF"/>
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
