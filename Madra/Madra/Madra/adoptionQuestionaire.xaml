@@ -92,7 +92,7 @@
                    Grid.Row="9" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    IsPassword="True"
-                   x:Name="dogNames"/>
+                   x:Name="howManyInHouse"/>
 
             <controls:CheckBox DefaultText ="Check if the dog will be in contact or living with children?"
                    Grid.Row="10" Grid.Column="1"
@@ -106,22 +106,277 @@
                    IsPassword="True"
                    x:Name="ageOfChild"/>
 
-            <Label Text="What Kind of accommodation do you have>"
+            <Label x:Name="Accommodation"
                    HorizontalOptions="Center"
                    FontSize="Micro"
                    Grid.Row="12" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
             <Picker x:Name="accommodation"
-                    SelectedIndexChanged="Accommodation"
-                    Grid.Row="5" Grid.Column="1"
+                    SelectedIndexChanged="accommodationSelected"
+                    Grid.Row="12" Grid.Column="3"
                     Grid.ColumnSpan="2"/>
 
+            <Label x:Name="OwnHome"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="13" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="ownhome"
+                    SelectedIndexChanged="OwnhomeSelected"
+                    Grid.Row="13" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="Describe your yard set up ex:fenced yard, dog run etc."
+                   FontSize="Micro"
+                   Grid.Row="14" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="yard"/>
+            
+            <Entry Placeholder="How long have you been thinking about adopting?"
+                   FontSize="Micro"
+                   Grid.Row="14" Grid.Column="3"
+                   Grid.ColumnSpan="2"
+                   x:Name="howlong"/>
+
+
+            <Entry Placeholder="Is anyone allergic to animals??"
+                   FontSize="Micro"
+                   Grid.Row="15" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="allergic"/>
+
+
+            <Entry Placeholder="Has everyone in the household discussed adopting??"
+                   FontSize="Micro"
+                   Grid.Row="16" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="discussesd"/>
+
+
+            <Entry Placeholder="Will someone be home during the day?"
+                   FontSize="Micro"
+                   Grid.Row="17" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="SomeoneHome"/>
+
+            <Entry Placeholder="Why are you looking for a dog?(Security, companion, company for another pet... other)"
+                   FontSize="Micro"
+                   Grid.Row="18" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="Whyadopt"/>
+
+            <Entry Placeholder="How long will the dog be left alone during the day?"
+                   FontSize="Micro"
+                   Grid.Row="19" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="howlongDay"/>
+
+            <Entry Placeholder="Where will the dog sleep?"
+                   FontSize="Micro"
+                   Grid.Row="20" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="Sleep"/>
+
+            <Entry Placeholder="Where will the dog spend the day?"
+                   FontSize="Micro"
+                   Grid.Row="21" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="dogsDay"/>
+
+            <Entry Placeholder="When was the last time you had a dog?"
+                   FontSize="Micro"
+                   Grid.Row="22" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="lastTime"/>
+
+            <Entry Placeholder="If you've had a dog what breed was he/she?"
+                   FontSize="Micro"
+                   Grid.Row="23" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="dogBefore"/>
+
+            <Entry Placeholder="What happened to the dog?"
+                   FontSize="Micro"
+                   Grid.Row="24" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="happenedTotheDog"/>
+
+            <Entry Placeholder="Do you have dog/s at the moment?"
+                   FontSize="Micro"
+                   Grid.Row="25" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="dogsNow"/>
+
+            <Entry Placeholder="If yes, what breed, sex and age?"
+                   FontSize="Micro"
+                   Grid.Row="26" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="breedSexAge"/>
+
+            <Entry Placeholder="Was you previous/current dog neutered?"
+                   FontSize="Micro"
+                   Grid.Row="27" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="neutered"/>
+
+            <Entry Placeholder="Are there other pets in the house?"
+                   FontSize="Micro"
+                   Grid.Row="28" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="otherPets"/>
+
+            <Entry Placeholder="If yes, what type?"
+                   FontSize="Micro"
+                   Grid.Row="29" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="typeofPet"/>
+
+            <Label x:Name="ResponsibleForDog"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="30" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="WhosResponsible"
+                    SelectedIndexChanged="WhosResponsibleSelected"
+                    Grid.Row="30" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="Who is ultimately responbile?"
+                   FontSize="Micro"
+                   Grid.Row="31" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="responsible"/>
+
+            <Entry Placeholder="How and how often, do you plan to exercise the dog?"
+                   FontSize="Micro"
+                   Grid.Row="32" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="dogsExercise"/>
+
+            <Entry Placeholder="Do you plan to obedience train the dog, if so, how?"
+                   FontSize="Micro"
+                   Grid.Row="33" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="obedience"/>
+
+            <Label x:Name="EnergyLevel"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="34" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Energy"
+                    SelectedIndexChanged="EnergyLevelSelected"
+                    Grid.Row="34" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Entry Placeholder="Expectation of behaviour? Personality type?"
+                   FontSize="Micro"
+                   Grid.Row="35" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   x:Name="Behaviour"/>
+
+            <Label x:Name="AgeofDog"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="36" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Age"
+                    SelectedIndexChanged="AgeSelected"
+                    Grid.Row="36" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="SizeofDog"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="37" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Size"
+                    SelectedIndexChanged="SizeSelected"
+                    Grid.Row="37" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="CoatofDog"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="38" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Coat"
+                    SelectedIndexChanged="CoatSelected"
+                    Grid.Row="38" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="GroomingofDog"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="39" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Groom"
+                    SelectedIndexChanged="GroomSelected"
+                    Grid.Row="39" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="LevelofTrain"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="40" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Train"
+                    SelectedIndexChanged="TrainSelected"
+                    Grid.Row="40" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="LevelofActive"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="41" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="Active"
+                    SelectedIndexChanged="ActiveSelected"
+                    Grid.Row="41" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="SpendtheirTime"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="42" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="SpendTime"
+                    SelectedIndexChanged="SpendTimeSelected"
+                    Grid.Row="42" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+            <Label x:Name="HouseTrained"
+                   HorizontalOptions="Center"
+                   FontSize="Micro"
+                   Grid.Row="43" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker x:Name="HouseTrain"
+                    SelectedIndexChanged="HouseTrainSelected"
+                    Grid.Row="43" Grid.Column="3"
+                    Grid.ColumnSpan="2"/>
+
+
+            <controls:CheckBox DefaultText ="Please Check the box to agree to let MADRA use your personal information in accordance with the Privacy Statement outlined on their website."
+                   Grid.Row="44" Grid.Column="1"
+                   Grid.ColumnSpan="2"  
+                   x:Name="Agreement"/>
 
 
 
             <Button Text="Adopt"
-                    Grid.Row="9" Grid.Column="1"
+                    Grid.Row="45" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB" 
@@ -130,7 +385,7 @@
             <Label Text="Help" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="10" Grid.Column="3" />
+                   Grid.Row="46" Grid.Column="3" />
             
         </Grid>
     </ScrollView>
