@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-using System.Net.Mail;
-using Newtonsoft.Json;
 
 namespace Madra
 {
@@ -72,9 +70,10 @@ namespace Madra
                 SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "********"); // password here
                 SmtpServer.EnableSsl = true;
 
-                SmtpServer.Send(mail);                
+                SmtpServer.Send(mail);
 
                 await DisplayAlert("Confirmed!", "Thank you for booking. An email with your booking details will be sent to you.", "Okay");
+
                 await Navigation.PushAsync(new HomePage());
             }
         }
