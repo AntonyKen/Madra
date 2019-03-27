@@ -14,28 +14,25 @@ namespace Madra
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Booking : ContentPage
     {
-        string selectedDate;
+        public static string selectedDate;
+        public static string newTime;
         DateTime checkDay;
         List<string> weekdays = new List<string>();
-        List<int> slots;
+        List<int> bookedSlots;
         DBConnection connection;
 
+        
         public Booking()
         {
             InitializeComponent();
             connection = new DBConnection();
-            slots = new List<int>();
-            //TimeSlot.Items.Add("12-1");
-            //TimeSlot.Items.Add("1-2");
-            //TimeSlot.Items.Add("2-3");
-            //TimeSlot.Items.Add("3-4");
-
+            bookedSlots = new List<int>();
             getSettings();
 
         }
 
         private async void DateSelected(object sender, DateChangedEventArgs e)
-        {
+        {            
             selectedDate = e.NewDate.ToString("yyyy-MM-dd");
             checkDay = DateTime.Parse(selectedDate);
             bool checker = false;
@@ -71,11 +68,11 @@ namespace Madra
                 string[] eTime = value["end_time"].Split(':');
                 int endTime = int.Parse(eTime[0]);
 
-                List<int> availableSlots = new List<int>();
+                List<int> allSlots = new List<int>();
 
                 for (int i=startTime; i < endTime; i++)
                 {
-                    availableSlots.Add(i);                    
+                    allSlots.Add(i);                    
                 }
 
                 postData = new List<KeyValuePair<string, string>>();
@@ -95,21 +92,21 @@ namespace Madra
                         foreach (var row in rows.Value)
                         {
                             string[] x = row.Value.Split(':');
-                            slots.Add(int.Parse(x[0]));
+                            bookedSlots.Add(int.Parse(x[0]));
                         }
                     }
 
-                    List<int> slotList = availableSlots.Except(slots).ToList();
+                    List<int> availableSlots = allSlots.Except(bookedSlots).ToList();
 
                     TimeSlot.Items.Clear();
-                    foreach (int i in slotList)
-                    TimeSlot.Items.Add(i.ToString() + " - " + (i + 1));
+                    foreach (int i in availableSlots)
+                    TimeSlot.Items.Add(i.ToString());
                 }
                 else
                 {
                     TimeSlot.Items.Clear();
-                    foreach (int i in availableSlots)
-                    TimeSlot.Items.Add(i.ToString() + " - " + (i + 1));
+                    foreach (int i in allSlots)
+                    TimeSlot.Items.Add(i.ToString() );
                 }           
             }
         }     
@@ -141,12 +138,32 @@ namespace Madra
 
         private async void continueBookingButton(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ConfirmBooking());
+            if (selectedDate != null)
+            {
+                if (TimeSlot.SelectedIndex != -1)
+                {
+                    await Navigation.PushAsync(new ConfirmBooking());
+                }
+                else
+                {                    
+                    await DisplayAlert("Error", "Please select a time slot.", "Okay");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Error", "Please select a date.", "Okay");
+            }
+            
+            
         }
 
         private void timeSelected(object sender, EventArgs e)
         {
-            var time = TimeSlot.Items[TimeSlot.SelectedIndex];
+            string time = TimeSlot.SelectedItem.ToString();
+            TimeSpan result = TimeSpan.FromHours(Convert.ToDouble(time));
+            newTime = result.ToString("hh':'mm':'ss");
+            
+            //DisplayAlert("test", newTime, "okay");
         }
     }
 }    

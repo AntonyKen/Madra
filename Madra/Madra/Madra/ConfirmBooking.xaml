@@ -38,31 +38,31 @@
                    TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="3" />
 
-            <Label Text="Confirm Time Slot"
+            <Label Text="Booking (2/2)"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="1" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
-
-            <Entry Placeholder="Address"
-                   Grid.Row="2" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   FontSize="Micro"
-                   x:Name="address"/>
-
+            
             <Entry Placeholder="Number attending"
-                   Grid.Row="3" Grid.Column="1"
+                   Grid.Row="2" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    FontSize="Micro"
                    x:Name="numberAttending"/>
             
-            <controls:CheckBox DefaultText="Please select if there would be any individuals under 16"
-                               HorizontalOptions="Center"                  
-                               Grid.Row="4" Grid.Column="1"
-                               Grid.ColumnSpan="2"/>
+            <Label Text="Will anyone under 16 be attending?"
+                   HorizontalOptions="Center"
+                   TextColor="#FFFFFF"
+                   Grid.Row="3" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+            
+            <Picker HorizontalOptions="Center"                  
+                    Grid.Row="4" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    x:Name="age"/>
 
             <Button Text="Confirm"
-                    Grid.Row="7" Grid.Column="1"
+                    Grid.Row="5" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
@@ -71,7 +71,7 @@
             <Label Text="Help"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="8" Grid.Column="3" />
+                   Grid.Row="6" Grid.Column="3" />
 
         </Grid>
     </ScrollView>

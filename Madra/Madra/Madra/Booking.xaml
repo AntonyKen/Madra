@@ -36,7 +36,7 @@
                    TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="3"/>
 
-            <Label Text="Walking"
+            <Label Text="Booking (1/2)"
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
                    Grid.Row="1" Grid.Column="1"             
@@ -73,17 +73,11 @@
                    Grid.Row="7" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    TextColor="#FFFFFF"/>
-            
+
             <Label x:Name="Calender"
-                   Grid.Row="8" Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="8" Grid.Column="1"                 
                    Grid.RowSpan="4"
                    TextColor="#FFFFFF"/>
-
-            <!--<Label x:Name="Time"
-                   Grid.Row="11" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   TextColor="#FFFFFF"/>-->
 
             <Label Text="Help"
                    HorizontalOptions="Center"
