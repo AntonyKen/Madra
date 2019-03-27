@@ -69,7 +69,7 @@ namespace Madra
                             "\r\n\r\nMadra";
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "jugheadjones");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "******"); // password here
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);                
