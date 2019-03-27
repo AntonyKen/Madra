@@ -15,6 +15,13 @@ namespace Madra
 		public Donations ()
 		{
 			InitializeComponent ();
-		}
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+           
+        }
 	}
 }

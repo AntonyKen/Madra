@@ -3,12 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Madra.Donations"
              BackgroundColor="#24527B">
-   
-    <StackLayout Padding="30">
-        <Label Text="To donate right now, you may use the PayPal service with or without a PayPal account. You can also set up a monthly donation via PayPal. Please remember that if you donate €250 (€21 per month), Madra can claim an extra 112.32 throught the Charitable Donation Scheme."
+
+    <StackLayout Padding="20">
+
+        <Label Text="Back" 
+               HorizontalOptions="Start"
+               TextColor="#FFFFFF"
+                   x:Name="back"/> 
+        
+        <Label Text="To donate right now, please visit Madra.ie"
             VerticalOptions="Center" 
-            HorizontalOptions="CenterAndExpand"
-                FontSize="Small"/>
+            HorizontalOptions="CenterAndExpand"               
+            FontSize="Small"/>
     </StackLayout>
 
 </ContentPage>

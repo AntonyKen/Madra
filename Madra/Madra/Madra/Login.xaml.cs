@@ -17,7 +17,19 @@ namespace Madra
 		public Login ()
 		{
 			InitializeComponent ();
-		}
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
+        }
         public static string mail;
         private async void loginButton(object sender, EventArgs e)
         {

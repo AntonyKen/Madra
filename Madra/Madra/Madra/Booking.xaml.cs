@@ -29,6 +29,18 @@ namespace Madra
             bookedSlots = new List<int>();
             getSettings();
 
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
+
         }
 
         private async void DateSelected(object sender, DateChangedEventArgs e)

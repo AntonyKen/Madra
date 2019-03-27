@@ -24,6 +24,18 @@ namespace Madra
             connection = new DBConnection();
             age.Items.Add("Yes");
             age.Items.Add("No");
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
         }
 
         private async void confirmBookingButton(object sender, EventArgs e)

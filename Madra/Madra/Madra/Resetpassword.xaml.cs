@@ -15,7 +15,19 @@ namespace Madra
 		public ResetPassword ()
 		{
 			InitializeComponent ();
-		}
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
+        }
 
         private void sendLinkButton(object sender, EventArgs e)
         {
