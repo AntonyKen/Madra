@@ -31,12 +31,14 @@
             <Label Text="Back" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="0" Grid.Column="0" />
+                   Grid.Row="0" Grid.Column="0"
+                   x:Name="back"/>
 
             <Label Text="Home" 
                    HorizontalOptions="Center"
                    TextColor="#FFFFFF"
-                   Grid.Row="0" Grid.Column="3" />
+                   Grid.Row="0" Grid.Column="3"
+                   x:Name="home"/>
 
             <Label Text="Booking (2/2)"
                    HorizontalOptions="Center"

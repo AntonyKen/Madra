@@ -24,8 +24,20 @@ namespace Madra
 			InitializeComponent ();
             conn = new DBConnection();
             user = getUser();
-            fillView();            
-		}
+            fillView();
+
+            back.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PopAsync())
+            });
+
+            home.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                Navigation.PushAsync(new HomePage()))
+            });
+        }
 
         private async void fillView()
         {
