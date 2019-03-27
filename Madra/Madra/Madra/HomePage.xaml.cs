@@ -57,7 +57,14 @@ namespace Madra
 
         private async void bookButton(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Booking());
+            if (string.IsNullOrEmpty(getUser()))
+            {
+                await DisplayAlert("Error", "Plese log in to your account or sign up to book.", "OK");
+            }
+            else
+            {
+                await Navigation.PushAsync(new Booking());
+            }
         }
 
         public static string getUser()

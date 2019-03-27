@@ -18,11 +18,11 @@ namespace Madra
 		{
 			InitializeComponent ();
 		}
-
+        public static string mail;
         private async void loginButton(object sender, EventArgs e)
         {
             DBConnection connection = new DBConnection();
-            string mail = email.Text;
+            mail = email.Text;
             string pwd = password.Text;
 
             if(pwd != null && mail != null )

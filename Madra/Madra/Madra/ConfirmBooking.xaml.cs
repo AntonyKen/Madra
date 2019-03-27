@@ -31,8 +31,8 @@ namespace Madra
                 var postData = new List<KeyValuePair<string, string>>();
                 postData.Add(new KeyValuePair<string, string>("action", "insert"));
                 postData.Add(new KeyValuePair<string, string>("table", "walking"));
-                postData.Add(new KeyValuePair<string, string>("columns", "day, timeslot, no_people, underage"));
-                postData.Add(new KeyValuePair<string, string>("values", "'" + Booking.selectedDate + "', '" + Booking.newTime + "', '" + numberAttending.Text + "', '" + age.SelectedItem + "'"));
+                postData.Add(new KeyValuePair<string, string>("columns", "day, timeslot, no_people, underage, email"));
+                postData.Add(new KeyValuePair<string, string>("values", "'" + Booking.selectedDate + "', '" + Booking.newTime + "', '" + numberAttending.Text + "', '" + age.SelectedItem + "', '" + Login.mail + "'"));
 
                 string result = await connection.doDBConnection(postData);
 
