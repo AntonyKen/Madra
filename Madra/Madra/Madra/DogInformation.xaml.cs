@@ -18,6 +18,7 @@ namespace Madra
         private Dogs dogDb;
         private string id;
         private string name;
+        private string breed;
 
         public DogInformation (string id)
 		{
@@ -48,7 +49,7 @@ namespace Madra
 
         private string getBreeds(Dictionary<string,string> dog)
         {
-            string breed = dog["BREEDNAME"];
+            breed = dog["BREEDNAME"];
             string breed1 = dog["BREEDNAME1"];
             string breed2 = dog["BREEDNAME2"];
 
@@ -81,7 +82,7 @@ namespace Madra
 
             if (response == true)
             {
-                await Navigation.PushAsync(new adoptionQuestionaire());
+                await Navigation.PushAsync(new adoptionQuestionaire(name, breed));
             }
         }
 

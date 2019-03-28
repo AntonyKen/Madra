@@ -20,7 +20,6 @@ namespace Madra
             showDogs();
         }
 
-
         public async Task<string> getAdoptableDogs()
         {
             Dogs conn = new Dogs();
@@ -40,31 +39,54 @@ namespace Madra
 
             foreach (var dogs in adoptableDogs)
             {
+                string name = "";
+                string id = "";
+                bool img = false;
+
                 foreach (var dog in dogs)
                 {
                     if (dog.Key == "ANIMALNAME")
                     {
-                        var lab = new Label()
-                        {
-                            Text = getName(dog.Value),
-                            TextColor = Color.White,
-                            HorizontalOptions = LayoutOptions.Center
-                        };
-                        dogsView.Children.Add(lab);
+                        name = getName(dog.Value);
                     }
 
                     if (dog.Key == "ID")
                     {
-                        var getImage = await getDogImage(dog.Value);
-                        Image image = new Image();
-                        image.Source = ImageSource.FromStream(() => new MemoryStream(getImage));
-                        TapGestureRecognizer tgr = new TapGestureRecognizer();
-                        tgr.Command = new Command<string>(getDogDetail);
-                        tgr.CommandParameter = dog.Value;
-                        image.GestureRecognizers.Add(tgr);
-                        dogsView.Children.Add(image);
-                    }                    
+                        id = dog.Value;
+                    }
+
+                    if(dog.Key == "WEBSITEIMAGECOUNT")
+                    {
+                        if(int.Parse(dog.Value) > 0)
+                        {
+                            img = true;
+                        } 
+                    }
+
                 }
+
+                if(img)
+                {
+                    var lab = new Label()
+                    {
+
+                        Text = getName(name),
+                        TextColor = Color.White,
+                        HorizontalOptions = LayoutOptions.Center
+                    };
+                    dogsView.Children.Add(lab);
+
+                    var getImage = await getDogImage(id);
+                    Image image = new Image();
+                    image.Source = ImageSource.FromStream(() => new MemoryStream(getImage));
+                    TapGestureRecognizer tgr = new TapGestureRecognizer();
+                    tgr.Command = new Command<string>(getDogDetail);
+                    tgr.CommandParameter = id;
+                    image.GestureRecognizers.Add(tgr);
+                    dogsView.Children.Add(image);
+                }
+                
+
             }
         }
 
@@ -72,8 +94,16 @@ namespace Madra
         {
             if (name.Contains("pup") || name.Contains("Pup"))
             {
-                string[] split = name.Split('-');
-                return split[1];
+                string[] split;
+                if(name.Contains("-"))
+                {
+                    split = name.Split('-');
+                    return split[1];
+                } else
+                {
+                    split = name.Split(' ');
+                    return split[split.Length - 1];
+                } 
             }
             return name;
         }
