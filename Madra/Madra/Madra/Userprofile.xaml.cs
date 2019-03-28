@@ -118,5 +118,10 @@ namespace Madra
             list.Add(new KeyValuePair<string, string>("where", "email = '" + user + "'"));
             return list;
         }
+
+        private async void bookingsButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserBookings());
+        }
     }
 }
