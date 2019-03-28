@@ -112,13 +112,13 @@ namespace Madra
 
                     TimeSlot.Items.Clear();
                     foreach (int i in availableSlots)
-                    TimeSlot.Items.Add(i.ToString());
+                    TimeSlot.Items.Add(i.ToString() + "-" + (i+1));
                 }
                 else
                 {
                     TimeSlot.Items.Clear();
                     foreach (int i in allSlots)
-                    TimeSlot.Items.Add(i.ToString() );
+                    TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
                 }           
             }
         }     
@@ -172,7 +172,8 @@ namespace Madra
         private void timeSelected(object sender, EventArgs e)
         {
             string time = TimeSlot.SelectedItem.ToString();
-            TimeSpan result = TimeSpan.FromHours(Convert.ToDouble(time));
+            string[] split = time.Split('-');
+            TimeSpan result = TimeSpan.FromHours(Convert.ToDouble(split[0]));
             newTime = result.ToString("hh':'mm':'ss");
             
             //DisplayAlert("test", newTime, "okay");
