@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
-             x:Class="Madra.Booking"
-             BackgroundColor="#24527B">
+             x:Class="Madra.Booking">
         
     <ScrollView>
         <Grid RowSpacing="10" Margin="10">
@@ -28,24 +27,20 @@
 
             <Label Text="Back" 
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="0"
                    x:Name="back"/>
 
             <Label Text="Home" 
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
                    Grid.Row="0" Grid.Column="3"
                    x:Name="home"/>
 
             <Label Text="Booking (1/2)"
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
                    Grid.Row="1" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
 
             <Label Text="Please Choose a date."
-                   TextColor="#FFFFFF"
                    Grid.Row="2" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
@@ -58,7 +53,6 @@
 
             <Label Text="Please Choose a time slot."
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
                    Grid.Row="4" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
@@ -73,17 +67,14 @@
 
             <Label Text="Available days:"
                    Grid.Row="7" Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   TextColor="#FFFFFF"/>
+                   Grid.ColumnSpan="2"/>
 
             <Label x:Name="Calender"
                    Grid.Row="8" Grid.Column="1"                 
-                   Grid.RowSpan="4"
-                   TextColor="#FFFFFF"/>
+                   Grid.RowSpan="4"/>
 
             <Label Text="Help"
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
                    Grid.Row="12" Grid.Column="3" />
 
         </Grid>
