@@ -13,18 +13,27 @@
     <None Remove="Images\Adopt.jpg" />
     <None Remove="Images\dogwalking.jpg" />
     <None Remove="Images\donate.jpg" />
+    <None Remove="Images\facebook.png" />
+    <None Remove="Images\instagram.png" />
+    <None Remove="Images\instragram.png" />
     <None Remove="Images\logo.jpg" />
     <None Remove="Images\logo2.jpg" />
+    <None Remove="Images\twitter.png" />
     <None Remove="Images\userprofile.png" />
+    <None Remove="Images\youtube.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\Adopt.jpg" />
     <EmbeddedResource Include="Images\dogwalking.jpg" />
     <EmbeddedResource Include="Images\donate.jpg" />
+    <EmbeddedResource Include="Images\facebook.png" />
+    <EmbeddedResource Include="Images\instagram.png" />
     <EmbeddedResource Include="Images\logo.jpg" />
     <EmbeddedResource Include="Images\logo2.jpg" />
+    <EmbeddedResource Include="Images\twitter.png" />
     <EmbeddedResource Include="Images\userprofile.png" />
+    <EmbeddedResource Include="Images\youtube.png" />
   </ItemGroup>
 
   <ItemGroup>

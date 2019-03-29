@@ -5,31 +5,51 @@
              x:Class="Madra.HomePage"
              BackgroundColor="#24527B">
 
-    <Grid>
-        <!--<Label x:Name="test"/>-->
-        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+    <StackLayout>
+        <Grid x:Name="homepageGrid">
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                BackgroundColor="#24527B"
                Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
-        <ImageButton Grid.Row="1" Grid.Column="0"
+            <ImageButton Grid.Row="1" Grid.Column="0"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
                      Clicked="adoptButton"/>
-        <ImageButton Grid.Row="1" Grid.Column="1"
+            <ImageButton Grid.Row="1" Grid.Column="1"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"
                      Clicked="bookButton"/>
-        <ImageButton Grid.Row="2" Grid.Column="0"
+            <ImageButton Grid.Row="2" Grid.Column="0"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.donate.jpg}"
                      Clicked="donateButton"/>
-        <ImageButton Grid.Row="2" Grid.Column="1"
+            <ImageButton Grid.Row="2" Grid.Column="1"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.userprofile.png}"
                      Clicked="userProfileButton"/>
-        <Button Grid.Row ="3" Grid.Column="0" Grid.ColumnSpan="2"
+        </Grid>
+        <Button
                 Text="Create Account"
                 Clicked="createProfileButton"
                 x:Name="createProfile"/>
-    </Grid>
+        <Grid>
+            <ImageButton Grid.Row="1" Grid.Column="0"
+                         BackgroundColor="#24527B"
+                         Source="{local:EmbeddedImage Madra.Images.facebook.png}"
+                         Clicked="facebookClicked"/>
+            <ImageButton Grid.Row="1" Grid.Column="1"
+                         BackgroundColor="#24527B"
+                         Source="{local:EmbeddedImage Madra.Images.twitter.png}"
+                         Clicked="twitterClicked"/>
+            <ImageButton Grid.Row="1" Grid.Column="2"
+                         BackgroundColor="#24527B"
+                         Source="{local:EmbeddedImage Madra.Images.youtube.png}"
+                         Clicked="youtubeClicked"/>
+            <ImageButton Grid.Row="1" Grid.Column="3"
+                         BackgroundColor="#24527B"
+                         Source="{local:EmbeddedImage Madra.Images.instagram.png}"
+                         Clicked="instagramClicked"/>
+        </Grid>
+    </StackLayout>
+    
 
 </ContentPage>
