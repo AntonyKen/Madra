@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Madra.MarkupExtensions"
-             x:Class="Madra.Login">
+             x:Class="Madra.Login"
+             BackgroundColor="#24527B">
 
     <ScrollView>
         <Grid RowSpacing="10" Margin="10">
@@ -42,32 +43,45 @@
                    Grid.Row="1" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
-            <Entry Placeholder="Email"
+            <Label Text="Email:"
+                   HorizontalOptions="Center"
                    Grid.Row="3" Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   x:Name="email"/>
-            <Entry Placeholder="Password"
+                   TextColor="#FFF"/>
+            <Entry 
                    Grid.Row="4" Grid.Column="1"
                    Grid.ColumnSpan="2"
+                   TextColor="#FFF"
+                   x:Name="email"/>
+
+            <Label Text="Password:"
+                   HorizontalOptions="Center"
+                   Grid.Row="5" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   TextColor="#FFF"/>
+            
+            <Entry
+                   Grid.Row="6" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   IsPassword="true"
+                   TextColor="#FFF"
                    x:Name="password"/>
 
             <Button Text="Login"
-                    Grid.Row="5" Grid.Column="1"
+                    Grid.Row="7" Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    TextColor="#FFFFFF"
-                    BackgroundColor="#3D75AB"
+                    BackgroundColor="#FFF"
                     Clicked="loginButton"/>
 
             <Label Text="Help" 
                    TextColor="#FFFFFF"
-                   Grid.Row="6" Grid.Column="3" />
+                   Grid.Row="8" Grid.Column="3" />
 
-            <Button Text="Forgot Password"
-                    TextColor="#FFFFFF"
-                    BackgroundColor="#3D75AB"
-                    Grid.Row="7" Grid.Column="1"
+            <!--<Button Text="Forgot Password"
+                    BackgroundColor="#FFFFFF"
+                    Grid.Row="9" Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    Clicked="forgotButton" />
+                    Clicked="forgotButton" />-->
 
         </Grid>
     </ScrollView>

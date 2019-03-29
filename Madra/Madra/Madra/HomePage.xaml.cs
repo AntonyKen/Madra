@@ -67,6 +67,26 @@ namespace Madra
             }
         }
 
+        private void facebookClicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.facebook.com/madradogrescue"));
+        }
+
+        private void twitterClicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://twitter.com/MADRADogRescue"));
+        }
+
+        private void youtubeClicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.youtube.com/channel/UCxOgdxeNbe_azDhqnUh0xCw"));
+        }
+
+        private void instagramClicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.instagram.com/madradogrescue/"));
+        }
+
         public static string getUser()
         {
             return UserSettings.Email;
