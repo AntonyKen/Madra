@@ -6,8 +6,91 @@
              BackgroundColor="#FFFFFF">
     
     <ScrollView>
-        <Grid RowSpacing="10" Margin="10">
+        <Grid Padding="0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -35,69 +118,67 @@
                    TextColor="Black"
                    Grid.Row="1" Grid.Column="1"             
                    Grid.ColumnSpan="2"/>
-
-            <StackLayout Grid.Row="2">
-
-                <Label Text="Street" 
-                   HorizontalOptions="CenterAndExpand"
+            
+            <Label Text="Street" 
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                      Grid.Row="2"  Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="3" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="street"/>
 
                 <Label Text="Town" 
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="4" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="5" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="town"/>
 
                 <Label Text="County" 
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="6" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="7" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="County"/>
 
 
                 <Label Text="Are you intrested in certain breeds?" x:Name="certainBreeds"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="8" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="CertainBreeds"
                     SelectedIndexChanged="CertainBreedsSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="9" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text= "Please enter the breeds"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="10" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    IsVisible="False"
                    x:Name="BreedsLabel"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="11" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="Breeds"
                    IsVisible="False"/>
                 
@@ -105,503 +186,500 @@
                 <Label Text="Are you interested in certain dogs" x:Name="certainDogs"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="12" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="CertainDogs"
                     SelectedIndexChanged="CertainDogsSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="13" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text= "Please enter the Dog's Name/(s)"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                     Grid.Row="14" Grid.Column="0"
+                     Grid.ColumnSpan="4"
                      IsVisible="False"
                        x:Name="dogNamesLabel"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="15" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="dogNames"                       
                    IsVisible="False"/>
                 
 
                 <Label Text= "How many people live in your household?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="16" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
+                       FontSize="Small"
                        Keyboard="Numeric"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="howManyInHouse"/>
+                       Grid.Row="17" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="howManyInHouse"/>
 
 
                 <Label Text="Will the dog be in contact with children?" x:Name="liveWithChildren"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="18" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="LiveChildren"
                     SelectedIndexChanged="ChildrenSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="19" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text= "How old are the children?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="20" Grid.Column="0"
+                       Grid.ColumnSpan="4"
                      IsVisible="False"
                        x:Name="ageOfChildLabel"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   IsVisible="False"
-                   x:Name="ageOfChild"/>
+                       FontSize="Small"
+                       Grid.Column="0"
+                       Grid.Row="21" Grid.ColumnSpan="4"
+                       IsVisible="False"                       
+                       x:Name="ageOfChild"/>
                 
 
                 <Label Text="Choose Accomodation Type" x:Name="Accommodation"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="22" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
-                <Picker x:Name="accommodation"
-                    SelectedIndexChanged="accommodationSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
-                
+            <Picker x:Name="accommodation"
+                        SelectedIndexChanged="accommodationSelected"
+                        Grid.Row="23" Grid.Column="0"
+                        Grid.ColumnSpan="4"/>
 
-                <Label Text="Do you own your home?" x:Name="OwnHome"
+            <Label Text="Do you own your home?" x:Name="OwnHome"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="24" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="ownhome"
-                    SelectedIndexChanged="OwnhomeSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                        SelectedIndexChanged="OwnhomeSelected"
+                        Grid.Row="25" Grid.Column="0"
+                        Grid.ColumnSpan="4"/>
                 
 
                 <Label Text= "Describe your yard set up. ex: fenced yard, dog run, etc"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="26" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="27" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="yard"/>
                 
 
                 <Label Text= "How long have you been thinking about adopting?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="28" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="29" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="howlong"/>
                 
 
                 <Label Text= "Is anyone allergic to animals?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="30" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="allergic"/>
+                       FontSize="Small"
+                       Grid.Row="31" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="allergic"/>
                 
 
                 <Label Text= "Has everyone in the household discussed adopting?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="32" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="discussesd"/>
+                       FontSize="Small"
+                       Grid.Row="33" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="discussesd"/>
                 
 
                 <Label Text= "Will someone be home during the day?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="34" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="SomeoneHome"/>
+                       FontSize="Small"
+                       Grid.Row="35" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="SomeoneHome"/>
                 
 
                 <Label Text= "Why are you looking for a dog? (Security, company, company for another pet, other?)"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="36" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="Whyadopt"/>
+                       FontSize="Small"
+                       Grid.Column="0"
+                       Grid.Row="37" Grid.ColumnSpan="4"
+                       x:Name="Whyadopt"/>
                 
 
                 <Label Text= "How long will the dog be left alone during the day?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="38" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="howlongDay"/>
+                       FontSize="Small"
+                       Grid.Row="39" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="howlongDay"/>
                 
 
                 <Label Text= "Where will the dog sleep?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="40" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="Sleep"/>
+                       FontSize="Small"
+                       Grid.Row="41" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="Sleep"/>
 
                 <Label Text="Have you ever had a dog?" x:Name="prevDog"
-                   HorizontalOptions="Center"
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="42" Grid.Column="0"
+                       Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="pickPrevDog"
-                    SelectedIndexChanged="prevDogSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                        SelectedIndexChanged="prevDogSelected"
+                        Grid.Row="43" Grid.Column="0"
+                        Grid.ColumnSpan="4"/>
 
 
                 <Label Text= "When was the last time you had a dog?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="44" Grid.Column="0"
+                       Grid.ColumnSpan="4"
                        x:Name="lastTimeLabel"
                        IsVisible="False"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="lastTime"
-                   IsVisible="False"/>
+                       FontSize="Small"
+                       Grid.Row="45" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="lastTime"
+                       IsVisible="False"/>
                 
 
                 <Label Text= "What breed was he/she?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="46" Grid.Column="0"
+                       Grid.ColumnSpan="4"
                        IsVisible="False"
                        x:Name="dogBeforeLabel"/>
 
                 <Entry Placeholder=""
-                   FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   x:Name="dogBefore"
+                       FontSize="Small"
+                       Grid.Row="47" Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       x:Name="dogBefore"
                        IsVisible="False"/>
                 
 
                 <Label Text= "What happened to the dog?"
-                   HorizontalOptions="CenterAndExpand"
-                     FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       FontSize="Small"
+                       Grid.Row="48" Grid.Column="0"
+                       Grid.ColumnSpan="4"
                        IsVisible="False"
                        x:Name="happenedTotheDogLabel"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                    Grid.Row="49" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="happenedTotheDog"
                        IsVisible="False"/>
                 
 
                 <Label Text= "Do you have dog/(s) at the moment?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="50" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Picker
                     SelectedIndexChanged="CurrDogSelected"
                    FontSize="Small"
-                  Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="51" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="dogsNow"/>
 
                 <Label Text= "What breed, sex and age?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                     Grid.Row="52" Grid.Column="0"
+                     Grid.ColumnSpan="4"
                        IsVisible="False"
                        x:Name="breedSexAgeLabel"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="53" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="breedSexAge"
                        IsVisible="False"/>
 
                 <Label Text= "Is your current dog neutered?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                     Grid.Row="54" Grid.Column="0"
+                     Grid.ColumnSpan="4"
                        IsVisible="False"
                        x:Name="neuteredLabel"/>
                 <Picker
                     SelectedIndexChanged="neuteredSelected"
                    FontSize="Small"
-                  Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="55" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="neutered"
                     IsVisible="False"/>
 
                 
                 <Label Text= "Are there other pets in the house?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                     Grid.Row="56" Grid.Column="0"
+                     Grid.ColumnSpan="4"
                        x:Name="petsLabel"/>
 
                 <Picker
                     SelectedIndexChanged="PetsSelected"
                    FontSize="Small"
-                  Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="57" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="pets"/>
 
                 <Label Text= "What type of Pet?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"
+                     Grid.Row="58" Grid.Column="0"
+                     Grid.ColumnSpan="4"
                        IsVisible="False"
                        x:Name="typeofPetLabel"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="59" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="typeofPet"
                        IsVisible="False"/>
 
                 <Label Text="The dog is desired for:" x:Name="DesiredFor"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="60" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="DesiredForPicker"
                     SelectedIndexChanged="DesiredForSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="61" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text= "Who will be responsible fo the dog?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="62" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="63" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="responsible"/>
 
                 <Label Text= "How and how often, do you plan to exercise the dog?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                   Grid.Row="64" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                    Grid.Row="65" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="dogsExercise"/>
 
                 <Label Text= "Do you plan to obedience train the dog, if so how?"
-                   HorizontalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
                      FontSize="Small"
-                     Grid.Column="1"
-                     Grid.ColumnSpan="2"/>
+                     Grid.Row="66" Grid.Column="0"
+                     Grid.ColumnSpan="4"/>
 
                 <Entry Placeholder=""
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"
+                   Grid.Row="67" Grid.Column="0"
+                   Grid.ColumnSpan="4"
                    x:Name="obedience"/>
 
                 <Label Text=" What Energy Level would you like the dog to have?" x:Name="EnergyLevel"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="68" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Energy"
                     SelectedIndexChanged="EnergyLevelSelected"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="69" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="How old would you like the dog to be?" x:Name="AgeofDog"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="70" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Age"
                     SelectedIndexChanged="AgeSelected"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="71" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="What size of dog are you looking for?" x:Name="SizeofDog"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="72" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Size"
                     SelectedIndexChanged="SizeSelected"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="73" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="What kind of Coat do you prefer for the dog?" x:Name="CoatofDog"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="74" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Coat"
                     SelectedIndexChanged="CoatSelected"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="75" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="How often are you comfortable grooming the dog?" x:Name="GroomingofDog"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="76" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Groom"
                     SelectedIndexChanged="GroomSelected"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="77" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="What training level do you prefer?" x:Name="LevelofTrain"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                  Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="78" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Train"
                     SelectedIndexChanged="TrainSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="79" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="How active will the dog be?" x:Name="LevelofActive"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="80" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="Active"
                     SelectedIndexChanged="ActiveSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="81" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="How will the dog spend their time?" x:Name="SpendtheirTime"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="82" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="SpendTime"
                     SelectedIndexChanged="SpendTimeSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="83" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="What level of house training do you prefer?" x:Name="HouseTrained"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="84" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="HouseTrain"
                     SelectedIndexChanged="HouseTrainSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="85" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
                 <Label Text="Please Choose Yes to agree to let MADRA use your personal information in accordance with the Privacy Statement outlined on their website." x:Name="Agreement"
                    HorizontalOptions="Center"
                    FontSize="Small"
-                    Grid.Column="1"
-                   Grid.ColumnSpan="2"/>
+                   Grid.Row="86" Grid.Column="0"
+                   Grid.ColumnSpan="4"/>
 
                 <Picker x:Name="AgreeMent"
                     SelectedIndexChanged="AgreementSelected"
-                     Grid.Column="1"
-                    Grid.ColumnSpan="2"/>
+                    Grid.Row="87" Grid.Column="0"
+                    Grid.ColumnSpan="4"/>
 
 
-                <Button Text="Adopt"
-                     Grid.Column="1"
+            <Button Text="Adopt"
+                    Grid.Row="88" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB" 
                     Clicked="adoptButton"/>
 
-                <Label Text="Help" 
+            <Label Text="Help" 
                    HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
-                    Grid.Column="3" />
+                   Grid.Row="89" Grid.Column="3" />
 
-            </StackLayout>
-
+            
         </Grid>
     </ScrollView>
 </ContentPage>
