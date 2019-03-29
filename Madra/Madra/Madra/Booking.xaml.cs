@@ -44,7 +44,7 @@ namespace Madra
         }
 
         private async void DateSelected(object sender, DateChangedEventArgs e)
-        {            
+        {
             selectedDate = e.NewDate.ToString("yyyy-MM-dd");
             checkDay = DateTime.Parse(selectedDate);
             bool checker = false;
@@ -60,7 +60,8 @@ namespace Madra
             if (checker == false)
             {
                 await DisplayAlert("Unavailable", "We are not open on " + checkDay.ToString("dddd") + " for walking. Please select another day. Scroll down to see the list of available days.", "Okay");
-            } else
+            }
+            else
             {
 
                 var postData = new List<KeyValuePair<string, string>>();
@@ -82,9 +83,9 @@ namespace Madra
 
                 List<int> allSlots = new List<int>();
 
-                for (int i=startTime; i < endTime; i++)
+                for (int i = startTime; i < endTime; i++)
                 {
-                    allSlots.Add(i);                    
+                    allSlots.Add(i);
                 }
 
                 postData = new List<KeyValuePair<string, string>>();
@@ -95,7 +96,7 @@ namespace Madra
 
                 string slotResult = await connection.doDBConnection(postData);
 
-                if(slotResult != "False")
+                if (slotResult != "False")
                 {
                     Dictionary<int, Dictionary<string, string>> slotValues = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(slotResult);
 
@@ -109,20 +110,20 @@ namespace Madra
                     }
 
                     List<int> availableSlots = allSlots.Except(bookedSlots).ToList();
-
+                    
                     TimeSlot.Items.Clear();
                     foreach (int i in availableSlots)
-                    TimeSlot.Items.Add(i.ToString() + "-" + (i+1));
+                        TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
                 }
                 else
                 {
                     TimeSlot.Items.Clear();
                     foreach (int i in allSlots)
-                    TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
-                }           
+                        TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
+                }
             }
-        }     
-        
+        }
+
         private async void getSettings()
         {
 

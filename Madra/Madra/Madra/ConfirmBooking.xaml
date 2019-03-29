@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             x:Class="Madra.ConfirmBooking"
-             >
+             x:Class="Madra.ConfirmBooking">
     
     <ScrollView>
         <Grid RowSpacing="10" Margin="10">
@@ -48,15 +47,15 @@
                    Grid.ColumnSpan="2"
                    Keyboard="Numeric"
                    x:Name="numberAttending"/>
-            
+
             <Label Text="Will anyone under 16 be attending?"
                    HorizontalOptions="Center"
                    Grid.Row="3" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
-            <Picker x:Name="age"
-                    HorizontalOptions="Center"                  
-                    Grid.Row="4" Grid.Column="1"/>
+            <Picker Grid.Row="4" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    x:Name="age"/>
 
             <Button Text="Confirm"
                     Grid.Row="5" Grid.Column="1"
