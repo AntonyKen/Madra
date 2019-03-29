@@ -4,12 +4,16 @@
              xmlns:local="clr-namespace:Madra.MarkupExtensions"
              x:Class="Madra.HomePage"
              BackgroundColor="#24527B">
-
+    
     <StackLayout>
+
         <Grid x:Name="homepageGrid">
-            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-               BackgroundColor="#24527B"
-               Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
+
+            <Image Grid.Row="0" Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   BackgroundColor="#24527B"
+                   Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
+
             <ImageButton Grid.Row="1" Grid.Column="0"
                      BackgroundColor="#24527B"
                      Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
@@ -24,10 +28,15 @@
                      Clicked="donateButton"/>
             <ImageButton Grid.Row="2" Grid.Column="1"
                      BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.userprofile.png}"
-                     Clicked="userProfileButton"/>
+                     Source="{local:EmbeddedImage Madra.Images.Events.png}"
+                     Clicked="eventsButton"/>
+
         </Grid>
-        <Button
+
+        <Button Text="Profile"                    
+                Clicked="userProfileButton"
+                HorizontalOptions="Center"/>
+        <Button HorizontalOptions="Center"
                 Text="Create Account"
                 Clicked="createProfileButton"
                 x:Name="createProfile"/>
@@ -49,7 +58,7 @@
                          Source="{local:EmbeddedImage Madra.Images.instagram.png}"
                          Clicked="instagramClicked"/>
         </Grid>
+        
     </StackLayout>
-    
-
+ 
 </ContentPage>

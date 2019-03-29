@@ -13,6 +13,7 @@
     <None Remove="Images\Adopt.jpg" />
     <None Remove="Images\dogwalking.jpg" />
     <None Remove="Images\donate.jpg" />
+    <None Remove="Images\Events.png" />
     <None Remove="Images\facebook.png" />
     <None Remove="Images\instagram.png" />
     <None Remove="Images\instragram.png" />
@@ -27,6 +28,7 @@
     <EmbeddedResource Include="Images\Adopt.jpg" />
     <EmbeddedResource Include="Images\dogwalking.jpg" />
     <EmbeddedResource Include="Images\donate.jpg" />
+    <EmbeddedResource Include="Images\Events.png" />
     <EmbeddedResource Include="Images\facebook.png" />
     <EmbeddedResource Include="Images\instagram.png" />
     <EmbeddedResource Include="Images\logo.jpg" />
@@ -73,6 +75,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Donations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Events.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Login.xaml">
