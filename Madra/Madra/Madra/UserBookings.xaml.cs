@@ -28,28 +28,38 @@ namespace Madra
         {
             var postData = new List<KeyValuePair<string, string>>();
             postData.Add(new KeyValuePair<string, string>("action", "select"));
-            postData.Add(new KeyValuePair<string, string>("select", "day, timeslot"));
+            postData.Add(new KeyValuePair<string, string>("select", "id, day, timeslot"));
             postData.Add(new KeyValuePair<string, string>("from", "walking"));
             postData.Add(new KeyValuePair<string, string>("where", "email = '" + getUser() + "'"));
 
             string result = await connection.doDBConnection(postData);
-
-            //test.Text = result;
             Dictionary<int, Dictionary<string, string>> values = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(result);
 
             foreach (var value in values)
             {
+                string id = "";
+                var grid = new Grid()
+                {
+                    HorizontalOptions = LayoutOptions.CenterAndExpand
+                };
+                bookingsView.Children.Add(grid);
+
                 foreach (var newValue in value.Value)
                 {
+                    if(newValue.Key == "id")
+                    {
+                        id = newValue.Value;
+                    }
+
                     if (newValue.Key == "day")
                     {
                         var dayLabel = new Label()
                         {
-                            Text = newValue.Value,
+                            Text = DateTime.Parse(newValue.Value).ToString("dd.MM.yyyy"),
                             TextColor = Color.White,
                             HorizontalOptions = LayoutOptions.Center
                         };
-                        bookingsView.Children.Add(dayLabel);
+                        grid.Children.Add(dayLabel, 0, 0);
                     }
 
                     if (newValue.Key == "timeslot")
@@ -60,40 +70,38 @@ namespace Madra
                             TextColor = Color.White,
                             HorizontalOptions = LayoutOptions.Center
                         };
-                        bookingsView.Children.Add(timeLabel);
+                        grid.Children.Add(timeLabel, 1, 0);
                     }
                 }
-                   
-               
                 var deleteButton = new Button()
-                {                    
+                {
                     Text = "Delete",
                     TextColor = Color.White,
-                    BackgroundColor = Color.Red                     
+                    BackgroundColor = Color.Red,
+                    ClassId = id
                 };
-
-                TapGestureRecognizer dButton = new TapGestureRecognizer();
-                dButton.Command = new Command<string>(deleteClicked);
-                deleteButton.GestureRecognizers.Add(dButton);
-                bookingsView.Children.Add(deleteButton);
-
-                //var tapGestureRecognizer = new TapGestureRecognizer();
-                //tapGestureRecognizer.Tapped += (s, e) =>
-                //{
-                //    DisplayAlert("test", "button clicked", "okay");
-                //};
-                //deleteButton.GestureRecognizers.Add(tapGestureRecognizer);
+                deleteButton.Clicked += new EventHandler(deleteClicked);
+                grid.Children.Add(deleteButton, 2, 0);
             }
         }
 
-        private void deleteClicked(string obj)
+        private async void deleteClicked(object sender, EventArgs e)
         {
-            DisplayAlert("test","button clicked","okay");
-        }
+            var button = (Button)sender;
+            var id = button.ClassId;
+            var result = await DisplayAlert("Confirm", "Are you sure you want to cancel this booking?", "Yes", "No");
+            if(result)
+            {
+                var postData = new List<KeyValuePair<string, string>>();
+                postData.Add(new KeyValuePair<string, string>("action", "delete"));
+                postData.Add(new KeyValuePair<string, string>("from", "walking"));
+                postData.Add(new KeyValuePair<string, string>("where", "id = " + id));
 
-        private async void deleteButton(object sender, EventArgs e)
-        {
-            await DisplayAlert("test", "test", "okay");
+                await connection.doDBConnection(postData);
+
+                bookingsView.Children.Clear();
+                loadBookings();
+            }
         }
 
         public static string getUser()

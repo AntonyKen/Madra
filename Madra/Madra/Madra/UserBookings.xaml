@@ -3,48 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Madra.UserBookings"
              BackgroundColor="#24527B">
-    <ScrollView>
+    <StackLayout>
         <Grid Padding="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Label  Text="Back"
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label  Text="Back"
                 HorizontalOptions="Center"
                 TextColor="#FFFFFF"
                 Grid.Row="0" Grid.Column="0"
                 x:Name="back"/>
 
-        <Label Text="Home"
+            <Label Text="Home"
                HorizontalOptions="Center"
                TextColor="#FFFFFF"
                Grid.Row="0" Grid.Column="3" 
                x:Name="home"/>
 
-        <Label Text="Your bookings:"
+            <Label Text="Your bookings:"
                TextColor="#FFFFFF"
                HorizontalOptions="Start"
                Grid.Row="1" Grid.Column="1"
                Grid.ColumnSpan="2"
                x:Name="test"/>
-        
-        <StackLayout x:Name="bookingsView"
-                     Grid.Row="2" Grid.Column="1">
-            
+
+        </Grid>
+        <StackLayout x:Name="bookingsView">
+
         </StackLayout>
-
-
-    </Grid>
-        </ScrollView>
+    </StackLayout>
+    
 </ContentPage>
