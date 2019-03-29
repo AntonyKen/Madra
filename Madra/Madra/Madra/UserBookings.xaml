@@ -41,9 +41,11 @@
                x:Name="test"/>
 
         </Grid>
+        <ScrollView>
         <StackLayout x:Name="bookingsView">
 
         </StackLayout>
+        </ScrollView>
     </StackLayout>
     
 </ContentPage>
