@@ -9,12 +9,13 @@
         <Label Text="Back" 
                HorizontalOptions="Start"
                TextColor="#FFFFFF"
-                   x:Name="back"/> 
+               x:Name="back"/> 
         
         <Label Text="To donate right now, please visit Madra.ie"
-            VerticalOptions="Center" 
-            HorizontalOptions="CenterAndExpand"               
-            FontSize="Small"/>
+               VerticalOptions="Center" 
+               HorizontalOptions="CenterAndExpand"               
+               FontSize="Small"
+               TextColor="#FFFFFF"/>
     </StackLayout>
 
 </ContentPage>

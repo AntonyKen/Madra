@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Madra.MarkupExtensions"
-             x:Class="Madra.Login"
-             BackgroundColor="#24527B">
+             x:Class="Madra.Login">
 
     <ScrollView>
         <Grid RowSpacing="10" Margin="10">
