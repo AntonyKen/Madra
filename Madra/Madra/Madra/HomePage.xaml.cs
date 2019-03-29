@@ -14,7 +14,7 @@ namespace Madra
     {
         public HomePage()
         {
-            InitializeComponent();
+            InitializeComponent();           
 
             if (!string.IsNullOrEmpty(getUser()))
             {
@@ -90,6 +90,11 @@ namespace Madra
         public static string getUser()
         {
             return UserSettings.Email;
+        }
+
+        private async void eventsButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Events());
         }
     }
 }
