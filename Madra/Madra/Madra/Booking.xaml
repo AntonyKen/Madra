@@ -46,7 +46,7 @@
 
             <DatePicker DateSelected="DateSelected"
                         MinimumDate="{x:Static system:DateTime.Now}"
-                        Format="yyyy-MM-dd"
+                        Format="dd-MM-yyyy"
                         Grid.Row="3" Grid.Column="1"
                         Grid.ColumnSpan="2"
                         x:Name="bookingDate"/>
