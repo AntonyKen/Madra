@@ -26,7 +26,6 @@ namespace Madra
         {
             InitializeComponent();
             connection = new DBConnection();
-            bookedSlots = new List<int>();
             getSettings();
 
             back.GestureRecognizers.Add(new TapGestureRecognizer
@@ -48,22 +47,22 @@ namespace Madra
             selectedDate = e.NewDate.ToString("yyyy-MM-dd");
             checkDay = DateTime.Parse(selectedDate);
             bool checker = false;
+            bookedSlots = new List<int>();
 
             for (int i = 0; i < weekdays.Count; i++)
             {
-                if(Equals(checkDay.ToString("dddd"), weekdays[i]))
+                if (Equals(checkDay.ToString("dddd"), weekdays[i]))
                 {
                     checker = true;
-                }                                           
+                }
             }
-
-            if (checker == false)
+            
+            if (!checker)
             {
                 await DisplayAlert("Unavailable", "We are not open on " + checkDay.ToString("dddd") + " for walking. Please select another day. Scroll down to see the list of available days.", "Okay");
             }
             else
             {
-
                 var postData = new List<KeyValuePair<string, string>>();
                 postData.Add(new KeyValuePair<string, string>("action", "select"));
                 postData.Add(new KeyValuePair<string, string>("select", "start_time, end_time"));
@@ -87,7 +86,7 @@ namespace Madra
                 {
                     allSlots.Add(i);
                 }
-
+                
                 postData = new List<KeyValuePair<string, string>>();
                 postData.Add(new KeyValuePair<string, string>("action", "select"));
                 postData.Add(new KeyValuePair<string, string>("select", "timeslot"));
@@ -108,20 +107,35 @@ namespace Madra
                             bookedSlots.Add(int.Parse(x[0]));
                         }
                     }
-
-                    List<int> availableSlots = allSlots.Except(bookedSlots).ToList();
                     
-                    TimeSlot.Items.Clear();
-                    foreach (int i in availableSlots)
-                        TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
+                    setTimeslots(allSlots.Except(bookedSlots).ToList());
                 }
                 else
                 {
-                    TimeSlot.Items.Clear();
-                    foreach (int i in allSlots)
-                        TimeSlot.Items.Add(i.ToString() + "-" + (i + 1));
+                    setTimeslots(allSlots);
                 }
             }
+        }
+
+        private void setTimeslots(List<int> slots)
+        {
+            if(slots.Count != 0)
+            {
+                if (TimeSlot.Items.Count > 0)
+                {
+                    TimeSlot.SelectedIndex = -1;
+                    TimeSlot.Items.Clear();
+                }
+
+                foreach (int i in slots)
+                {
+                    TimeSlot.Items.Add(i.ToString() + " - " + (i + 1));
+                }
+            } else
+            {
+                DisplayAlert("Info", "This day is fully booked. Please select a different day.", "Ok");
+            }
+            
         }
 
         private async void getSettings()
@@ -165,19 +179,18 @@ namespace Madra
             else
             {
                 await DisplayAlert("Error", "Please select a date.", "Okay");
-            }
-            
-            
+            }            
         }
 
         private void timeSelected(object sender, EventArgs e)
         {
-            string time = TimeSlot.SelectedItem.ToString();
-            string[] split = time.Split('-');
-            TimeSpan result = TimeSpan.FromHours(Convert.ToDouble(split[0]));
-            newTime = result.ToString("hh':'mm':'ss");
-            
-            //DisplayAlert("test", newTime, "okay");
+            if(TimeSlot.SelectedIndex != -1)
+            {
+                string time = TimeSlot.SelectedItem.ToString();
+                string[] split = time.Split('-');
+                TimeSpan result = TimeSpan.FromHours(Convert.ToDouble(split[0]));
+                newTime = result.ToString("hh':'mm':'ss");
+            }
         }
     }
 }    
