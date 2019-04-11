@@ -76,20 +76,20 @@
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
                     Clicked="updateButton"/>
-            
-            <Button Text="Log out"
+                        
+            <Button Text="My Bookings"
                     Grid.Row="10" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
-                    Clicked="logoutButton"/>
-            
-            <Button Text="My Bookings"
+                    Clicked="bookingsButton"/>
+
+            <Button Text="Log out"
                     Grid.Row="11" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
-                    Clicked="bookingsButton"/>
+                    Clicked="logoutButton"/>
 
             <Label Text="Help" 
                    HorizontalOptions="Center"

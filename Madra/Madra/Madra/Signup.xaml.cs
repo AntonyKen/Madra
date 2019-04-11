@@ -31,6 +31,15 @@ namespace Madra
                 Command = new Command(() =>
                 Navigation.PushAsync(new HomePage()))
             });
+
+            getMinimumDate();
+
+        }
+
+        private void getMinimumDate()
+        {
+            DateTime cDate = DateTime.Today;
+            dob.MaximumDate = new DateTime(cDate.Year - 16, cDate.Month, cDate.Day);
         }
 
         private void newdate(object sender, DateChangedEventArgs e)

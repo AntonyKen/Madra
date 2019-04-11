@@ -4,38 +4,34 @@
              xmlns:local="clr-namespace:Madra.MarkupExtensions"
              x:Class="Madra.HomePage"
              BackgroundColor="#24527B">
-    
+    <ScrollView>
     <StackLayout>
 
-        <Grid x:Name="homepageGrid">
-
-            <Image Grid.Row="0" Grid.Column="0"
+        <Image Grid.Row="0" Grid.Column="0"
                    Grid.ColumnSpan="2"
                    BackgroundColor="#24527B"
                    Source="{local:EmbeddedImage Madra.Images.logo2.jpg}"/>
 
-            <ImageButton Grid.Row="1" Grid.Column="0"
-                     BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
-                     Clicked="adoptButton"/>
-            <ImageButton Grid.Row="1" Grid.Column="1"
-                     BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.dogwalking.jpg}"
-                     Clicked="bookButton"/>
-            <ImageButton Grid.Row="2" Grid.Column="0"
-                     BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.donate.jpg}"
-                     Clicked="donateButton"/>
-            <ImageButton Grid.Row="2" Grid.Column="1"
-                     BackgroundColor="#24527B"
-                     Source="{local:EmbeddedImage Madra.Images.Events.png}"
-                     Clicked="eventsButton"/>
-
-        </Grid>
-
+        <!--<ImageButton Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="#24527B"
+                    Source="{local:EmbeddedImage Madra.Images.Adopt.jpg}"
+                    Clicked="adoptButton"/>-->
         <Button Text="Profile"                    
                 Clicked="userProfileButton"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="End"
+                BackgroundColor="#24527B"/>
+        <Button Text ="Walking" Clicked="bookButton"
+                HorizontalOptions="Center"
+                CornerRadius="50"/>
+        <Button Text ="Donate"
+                Clicked="donateButton"
+                HorizontalOptions="Center"
+                CornerRadius="50"/>
+        <Button Text ="Events"
+                Clicked="eventsButton"
+                HorizontalOptions="Center"
+                CornerRadius="50"/>
+        
         <Button HorizontalOptions="Center"
                 Text="Create Account"
                 Clicked="createProfileButton"
@@ -60,5 +56,5 @@
         </Grid>
         
     </StackLayout>
- 
+    </ScrollView>
 </ContentPage>
