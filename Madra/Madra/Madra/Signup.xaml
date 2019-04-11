@@ -58,7 +58,7 @@
 
             <DatePicker DateSelected="newdate"
                         x:Name="dob"
-                        Date="{x:Static system:DateTime.Today}"
+                        Date="{x:Static system:DateTime.Today}"                        
                         Grid.Row="4" Grid.Column="1"
                         Grid.ColumnSpan="2"/>
 

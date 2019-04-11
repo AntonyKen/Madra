@@ -42,18 +42,18 @@ namespace Madra
             }            
         }
 
-        private async void adoptButton(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(getUser()))
-            {
-                await DisplayAlert("Error", "Plese log in to your account or sign up for a new one.", "OK");
-            }
-            else
-            {
-                await Navigation.PushAsync(new Adoption());
-            }
+        //private async void adoptButton(object sender, EventArgs e)
+        //{
+        //    if (string.IsNullOrEmpty(getUser()))
+        //    {
+        //        await DisplayAlert("Error", "Plese log in to your account or sign up for a new one.", "OK");
+        //    }
+        //    else
+        //    {
+        //        await Navigation.PushAsync(new Adoption());
+        //    }
             
-        }
+        //}
 
         private async void bookButton(object sender, EventArgs e)
         {
