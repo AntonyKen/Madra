@@ -24,6 +24,8 @@ namespace Madra
             connection = new DBConnection();
             age.Items.Add("No");
             age.Items.Add("Yes");
+            MADRAbefore.Items.Add("No");
+            MADRAbefore.Items.Add("Yes");
 
             back.GestureRecognizers.Add(new TapGestureRecognizer
             {
@@ -43,8 +45,9 @@ namespace Madra
             if ((numberAttending.Text != "") || (age.SelectedIndex != -1))
             {
                 string values = "'" + Booking.selectedDate + "', '"
-                    + Booking.newTime + "', '" + numberAttending.Text + "', " + age.SelectedIndex.ToString() + ", '"
+                    + Booking.newTime + "', '" + numberAttending.Text + "', '" + age.SelectedIndex.ToString() + "', '"
                     + getUser() + "'";
+
                 
 
                 var postData = new List<KeyValuePair<string, string>>();
@@ -58,7 +61,7 @@ namespace Madra
                 //var postData2 = new List<KeyValuePair<string, string>>();
                 //postData2.Add(new KeyValuePair<string, string>("action", "select"));
                 //postData2.Add(new KeyValuePair<string, string>("select", "first_name"));
-                //postData2.Add(new KeyValuePair<string, string>("from", "app_user"));
+                //postData2.Add(new KeyValuePair<string, string>("from", "volunteer"));
                 //postData2.Add(new KeyValuePair<string, string>("where", "email = '" + getUser() + "'"));
 
                 //string result2 = await connection.doDBConnection(postData2);

@@ -41,30 +41,50 @@
                    HorizontalOptions="Center"
                    Grid.Row="1" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
-            
-            <Entry Placeholder="Number attending"
+
+            <Label Text="Have you been to MADRA before?"
+                   HorizontalOptions="Center"
                    Grid.Row="2" Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
+
+            <Picker Grid.Row="3" Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    x:Name="MADRAbefore"/>
+
+            <Entry Placeholder="Number attending"
+                   Grid.Row="4" Grid.Column="1"
                    Grid.ColumnSpan="2"
                    Keyboard="Numeric"
                    x:Name="numberAttending"/>
 
             <Label Text="Will anyone under 16 be attending?"
                    HorizontalOptions="Center"
-                   Grid.Row="3" Grid.Column="1"
+                   Grid.Row="5" Grid.Column="1"
                    Grid.ColumnSpan="2"/>
 
-            <Picker Grid.Row="4" Grid.Column="1"
+            <Picker Grid.Row="6" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     x:Name="age"/>
 
+            <Entry Placeholder="How many under 16?"
+                   Grid.Row="7" Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Keyboard="Numeric"
+                   x:Name="under16"/>
+
             <Button Text="Confirm"
-                    Grid.Row="5" Grid.Column="1"
+                    Grid.Row="8" Grid.Column="1"
                     Grid.ColumnSpan="2"
                     Clicked="confirmBookingButton"/>
 
+            <Label Text=""
+                   HorizontalOptions="Center"
+                   Grid.Row="9" Grid.Column="3" 
+                   x:Name="test"/>
+
             <Label Text="Help"
                    HorizontalOptions="Center"
-                   Grid.Row="6" Grid.Column="3" />
+                   Grid.Row="10" Grid.Column="3" />
         </Grid>
     </ScrollView>
 </ContentPage>

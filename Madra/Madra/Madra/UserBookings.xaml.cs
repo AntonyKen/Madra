@@ -34,6 +34,7 @@ namespace Madra
             postData.Add(new KeyValuePair<string, string>("where", "email = '" + getUser() + "'"));
 
             string result = await connection.doDBConnection(postData);
+            
             Dictionary<int, Dictionary<string, string>> values = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<string, string>>>(result);
 
             foreach (var value in values)
@@ -116,7 +117,7 @@ namespace Madra
                 var postDataName = new List<KeyValuePair<string, string>>();
                 postDataName.Add(new KeyValuePair<string, string>("action", "select"));
                 postDataName.Add(new KeyValuePair<string, string>("select", "first_name"));
-                postDataName.Add(new KeyValuePair<string, string>("from", "app_user"));
+                postDataName.Add(new KeyValuePair<string, string>("from", "volunteer"));
                 postDataName.Add(new KeyValuePair<string, string>("where", "email = '" + getUser() + "'"));
 
                 string result2 = await connection.doDBConnection(postDataName);

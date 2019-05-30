@@ -42,7 +42,7 @@ namespace Madra
                 var postData = new List<KeyValuePair<string, string>>();
                 postData.Add(new KeyValuePair<string, string>("action", "select"));
                 postData.Add(new KeyValuePair<string, string>("select", "app_password"));
-                postData.Add(new KeyValuePair<string, string>("from", "app_user"));
+                postData.Add(new KeyValuePair<string, string>("from", "volunteer"));
                 postData.Add(new KeyValuePair<string, string>("where", "email = '" + mail + "'"));
 
                 string result = await connection.doDBConnection(postData);

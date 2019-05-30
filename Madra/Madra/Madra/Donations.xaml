@@ -11,11 +11,16 @@
                TextColor="#FFFFFF"
                x:Name="back"/> 
         
-        <Label Text="To donate right now, please visit Madra.ie"
+        <Entry Placeholder="Enter Amount"
                VerticalOptions="Center" 
                HorizontalOptions="CenterAndExpand"               
                FontSize="Small"
+               Keyboard="Numeric"
                TextColor="#FFFFFF"/>
+
+      
+
+
     </StackLayout>
 
 </ContentPage>
