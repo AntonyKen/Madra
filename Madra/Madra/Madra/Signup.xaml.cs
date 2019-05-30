@@ -73,7 +73,7 @@ namespace Madra
             {
                 var postData = new List<KeyValuePair<string, string>>();
                 postData.Add(new KeyValuePair<string, string>("action", "select"));
-                postData.Add(new KeyValuePair<string, string>("from", "app_user"));
+                postData.Add(new KeyValuePair<string, string>("from", "volunteer"));
                 postData.Add(new KeyValuePair<string, string>("where", "email = '" + emailid + "'"));
 
                 string result = await connection.doDBConnection(postData);
@@ -82,7 +82,7 @@ namespace Madra
                 {
                     var postData2 = new List<KeyValuePair<string, string>>();
                     postData2.Add(new KeyValuePair<string, string>("action", "insert"));
-                    postData2.Add(new KeyValuePair<string, string>("table", "app_user"));
+                    postData2.Add(new KeyValuePair<string, string>("table", "volunteer"));
                     postData2.Add(new KeyValuePair<string, string>("columns", "first_name, last_name, date_of_birth, phone_number, email, app_password"));
                     postData2.Add(new KeyValuePair<string, string>("values", "'" + fName + "', '" + lName + "', '" + dateOfBirth + "', '" + pNumber + "', '" + emailid + "', '" + pWord + "'"));
 

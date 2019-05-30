@@ -43,7 +43,7 @@ namespace Madra
         {
             var data = new List<KeyValuePair<string, string>>();
             data.Add(new KeyValuePair<string, string>("action", "select"));
-            data.Add(new KeyValuePair<string, string>("from", "app_user"));
+            data.Add(new KeyValuePair<string, string>("from", "volunteer"));
             data.Add(new KeyValuePair<string, string>("where", "email = '" + user + "'"));
 
             string result = await conn.doDBConnection(data);
@@ -69,7 +69,7 @@ namespace Madra
             
             var data = new List<KeyValuePair<string, string>>();
             data.Add(new KeyValuePair<string, string>("action", "update"));
-            data.Add(new KeyValuePair<string, string>("table", "app_user"));
+            data.Add(new KeyValuePair<string, string>("table", "volunteer"));
             data.Add(new KeyValuePair<string, string>("update", "first_name = '" + fname + "', last_name = '" + lname + "', " +
                 dateOfBirth + " phone_number = '" + pNumber + "'"));
             data.Add(new KeyValuePair<string, string>("where", "email = '" + user + "'"));
@@ -90,13 +90,13 @@ namespace Madra
             var response = await DisplayAlert("Confirmation", "Do you want to delete your account?\nAll walking bookings and adoption requests will be deleted.", "Yes", "No");
             if (response == true)
             {
-                await conn.doDBConnection(getDeleteList("app_user"));
-                await conn.doDBConnection(getDeleteList("adoption_request"));
-                await conn.doDBConnection(getDeleteList("current_dog"));
-                await conn.doDBConnection(getDeleteList("home_info"));
-                await conn.doDBConnection(getDeleteList("new_dog"));
-                await conn.doDBConnection(getDeleteList("pets"));
-                await conn.doDBConnection(getDeleteList("prev_dog"));
+                await conn.doDBConnection(getDeleteList("volunteer"));
+                //await conn.doDBConnection(getDeleteList("adoption_request"));
+                //await conn.doDBConnection(getDeleteList("current_dog"));
+               // await conn.doDBConnection(getDeleteList("home_info"));
+               // await conn.doDBConnection(getDeleteList("new_dog"));
+               // await conn.doDBConnection(getDeleteList("pets"));
+                //await conn.doDBConnection(getDeleteList("prev_dog"));
                 await conn.doDBConnection(getDeleteList("walking"));
 
                 await DisplayAlert("Alert","Your account has been deleted.","Okay");

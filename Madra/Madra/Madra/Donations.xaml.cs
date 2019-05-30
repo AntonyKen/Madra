@@ -12,16 +12,25 @@ namespace Madra
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Donations : ContentPage
 	{
-		public Donations ()
-		{
-			InitializeComponent ();
 
-            back.GestureRecognizers.Add(new TapGestureRecognizer
+        public Donations ()
+		{
+
+			InitializeComponent ();
+     
+
+        back.GestureRecognizers.Add(new TapGestureRecognizer
             {
                 Command = new Command(() =>
                 Navigation.PopAsync())
             });
-           
+
+
+
+            
+
         }
-	}
+
+       
+    }
 }
