@@ -31,6 +31,9 @@ namespace Madra
 
         }
 
-       
+        private void donateButton(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://www.madra.ie/index.php/make-a-donation"));
+        }
     }
 }

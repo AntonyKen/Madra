@@ -9,16 +9,21 @@
         <Label Text="Back" 
                HorizontalOptions="Start"
                TextColor="#FFFFFF"
-               x:Name="back"/> 
-        
-        <Entry Placeholder="Enter Amount"
-               VerticalOptions="Center" 
-               HorizontalOptions="CenterAndExpand"               
-               FontSize="Small"
-               Keyboard="Numeric"
-               TextColor="#FFFFFF"/>
+               x:Name="back"/>
 
-      
+        <Label Text="Please click on the button below to make a donation." 
+               VerticalOptions="Center" 
+               HorizontalOptions="CenterAndExpand" 
+               TextColor="#FFFFFF"/>
+        
+        <Button Text="Donate"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="#FFF"
+                Clicked="donateButton"/>
+
+
+
 
 
     </StackLayout>
