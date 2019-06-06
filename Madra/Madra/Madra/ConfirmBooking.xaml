@@ -69,7 +69,6 @@
             <Entry Placeholder="How many under 16?"
                    Grid.Row="7" Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   Keyboard="Numeric"
                    x:Name="under16"/>
 
             <Button Text="Confirm"

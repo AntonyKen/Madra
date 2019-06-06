@@ -27,5 +27,6 @@ namespace Madra.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
     }
 }
