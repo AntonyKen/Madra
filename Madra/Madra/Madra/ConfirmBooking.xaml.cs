@@ -26,6 +26,20 @@ namespace Madra
             age.Items.Add("Yes");
             MADRAbefore.Items.Add("No");
             MADRAbefore.Items.Add("Yes");
+           under16.IsVisible = false;
+
+            age.SelectedIndexChanged += (sender, args) =>
+            {
+                if (age.SelectedIndex == 1 )
+                {
+                     under16.IsVisible = true;
+                  
+                }
+                else
+                {
+                    under16.IsVisible = false;
+                }
+            };
 
             back.GestureRecognizers.Add(new TapGestureRecognizer
             {
@@ -40,9 +54,11 @@ namespace Madra
             });
         }
 
+       
+
         private async void confirmBookingButton(object sender, EventArgs e)
         {
-            if ((numberAttending.Text != "") || (age.SelectedIndex != -1))
+            if ((numberAttending.Text != "") && (age.SelectedIndex != -1) && (MADRAbefore.SelectedIndex != -1) && under16.Text != "")
             {
                 string values = "'" + Booking.selectedDate + "', '"
                     + Booking.newTime + "', '" + numberAttending.Text + "', '" + age.SelectedIndex.ToString() + "', '"
@@ -92,11 +108,22 @@ namespace Madra
 
                 //SmtpServer.Send(mail);
 
+
+
                 await DisplayAlert("Confirmed!", "Thank you for booking. An email with your booking details will be sent to you.", "Okay");
 
                 await Navigation.PushAsync(new HomePage());
             }
+            else
+            {
+                await DisplayAlert("ERROR", "Please enter all details!", "OK");
+            }
+
         }
+        
+
+           
+
 
         public static string getUser()
         {
