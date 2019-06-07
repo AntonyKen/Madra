@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Madra.Privacy">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Mutts Anonymous Dog Rescue and Adoption fully respects your rights to privacy and are committed to strict adherence to General Data Protection Regulations (GDPR) which becomes fully effective on 25th May 2018 as well as the provisions of the Data Protection Act 2018."/>
+                <Label Text=" Who we are and what we do"
+                       FontAttributes="Bold"> </Label>
+
+                <Label Text=" We are Galway based Dog Rescue and Rehoming Charity (Registered Charity No 20072698), our kennels are based in Camus, Connemara and we also run three charity shops in Furbo, Westside and Moycullen. This Privacy Notice is primarily directed to individuals who wish to avail of our services in either adopting or fostering a dog from MADRA or taking part in any volunteering with MADRA through our many fundraising events or at the kennels in Connemara."></Label>
+
+
+                <Label Text ="If you wish to contact us on any issue regarding your data protection, the following are the contact options."
+                       FontAttributes="Bold"></Label>
+
+                <Label Text=" Post: MADRA Head Office, Knockavaddy, Furbo, Galway."></Label>
+                <Label Text="Phone: GDPR 091 584274"></Label>
+                <Label Text ="Email: GDPR@madra.ie"></Label>
+                <Label Text="This Privacy Statement sets out how MADRA uses and processes any information that you give to us. We respect your privacy and are committed to protecting your personal information. This Privacy Statement explains how we collect, transfer, process, use and disclose your data and sets out our security practices."></Label>
+
+
+                <Label Text="What we collect"
+                       FontAttributes="Bold"></Label>
+
+                <Label Text ="We collect personal information (PI) that you provide to us, which is information that identifies you as an individual. We only do this when you have provided us with the information and you have given your consent that we can use it in your interest for the purposes set out in this Privacy Statement. This PI may include your name, address, email address, phone number and details about the home environment in which you live that will help MADRA find the most suitable dog for you and your home."> </Label>
+
+                <Label Text ="How we use your Personal Information and the Legal basis for doing so"
+       FontAttributes="Bold"></Label>
+
+                <Label Text =" Any personal data you volunteer will be used for the purpose for which you supply it and will be treated with the highest standards of security and confidentiality, strictly in accordance with General Data Protection Regulations. MADRA collects and uses your personal information (PI) to deliver the most suitable or related services you have requested. Your information will only be used for matching your home with the right dog and will not be passed on to any third party or otherwise.">
+                    
+                </Label>
+
+                <Label Text =" By providing your PI, and where you have agreed to receiving communications from us, we may use the information:"
+       FontAttributes="Bold"></Label>
+                <Label Text="to consider your application for any adoption or fostering of a MADRA dog,
+to register your information with microchip registration database (Animark, FIDO),
+to notify you of any suitable dogs in the future,
+to maintain relationships with donors and supporters, including processing tax relief information for donors,
+to send out information about upcoming events for volunteers,
+to improve on the level of service that we provide,
+The legal basis for processing your personal information is that you have explicitly given your consent to us. This consent can be given at the time of initially seeking our services or having read the company's Privacy Statement providing explicit consent to our continuing use of the personal data you have supplied us."></Label>
+
+                <Label Text="Retention Period – How long we keep your data"
+       FontAttributes="Bold"></Label>
+
+                <Label Text ="This will vary depending on the purpose for which we received your personal information. MADRA will only hold this data for as long we deem necessary when full consent is received whether you might be a volunteer, donor, fosterer or adopter. These time limits are listed below."></Label>
+                <Label Text="Legacies; For Supporters who have pledged a gift in their will to MADRA and want to maintain a lifelong interest to ensure their wishes are fulfilled in support of MADRA Dog Rescue
+MADRA Adopters; these are supporters who have given a MADRA Rescue Dog a new home and to give us the chance to maintain contact throughout the life of the dog
+MADRA Fosterers; For our supporters who offer our dogs the temporary care they need to get them ready for their new permanent homes. To maintain this relationship, we would need to hold your contact information if you wish to be on the foster list and considered for future fostering opportunities
+Volunteers; For supporters of MADRA who volunteer their time at fundraising events, at the charity shops and at our kennels in Camus. We intend to hold this contact information for as long as any MADRA volunteer is willing to offer their help once consent is given
+Donors; For supporters of our charity who have helped us with financial gifts. In line with tax relief guidelines for charities such as ours we would like to hold your information for period of 5 years to ensure we can get the most of your generosity and support
+Your Rights"></Label>
+
+                <Label Text ="Right of access – you have the right to request a copy of the information that we hold about you in accordance with Section 86 of the Data Protection Act 2018;
+Right of rectification – you have a right to correct data that we hold about you that is inaccurate or incomplete in accordance with Section 87 and Section 89 of the Data Protection Act 2018;
+Right to erasure – in certain circumstances, you can ask for the data we hold about you to be erased from our records in accordance with Section 87 and Section 89 of the Data Protection Act 2018;
+Right to restriction of processing – where certain conditions apply to have a right to restrict the processing in accordance with Section 87 and Section 89 of the Data Protection Act 2018
+Right of portability – subject to certain restrictions, you have the right to have the data we hold about you transferred to another organisation where we hold it in electronic form. This right of data portability applies to: (i) personal data that we process automatically (i.e. without any human intervention); (ii) personal data provided by you; and (iii) personal data that we process based on your consent or in order to fulfil a contract.
+Right to object – you have the right to object to certain types of processing such as direct marketing.
+All of the above requests can be directed to the MADRA contact points listed in this Statement."></Label>
+                <Label Text =" Complaints"
+       FontAttributes="Bold"></Label>
+
+                <Label Text =" If you wish to make a complaint about how your personal data is being processed by us or how your complaint has been handled, you have the right to lodge a complaint directly with the supervisory authority:"></Label>
+
+                <Label Text ="Data Protection Commissioner: Office of the Data Protection Commissioner. Canal House, Station Road, Portarlington, Co. Laois, R32 AP23, Ireland. Phone +353 (0761) 104 800 | LoCall 1890 25 22 31 | Fax +353 57 868 4757 | email info@dataprotection.ie"></Label>
+                <Label Text =" How we protect your PI"
+       FontAttributes="Bold"></Label>
+
+                <Label Text =" MADRA will take appropriate legal, organisational, and technical measures to protect your personal information. We use a variety of security technologies and procedures to help protect your PI from unauthorised access, use or disclosure. Unfortunately, the transmission of information via the Internet or a mobile phone network connection is not completely secure. Although we will do our best to protect your PI, we cannot guarantee the security of the PI you transmit to our website. Any transmission is at your own risk. While we cannot guarantee that loss, misuse or alteration to data will not occur during transmission, once we have received your information, we will employ appropriate technical security measures to protect your data.
+MADRA takes its obligations very seriously and adopts the strongest line in relation to the misuse of customer information by any of its staff. Any breach of trust regarding the confidentiality of information is treated as serious misconduct under the Disciplinary Code and can lead to sanctions up to and including dismissal."></Label>
+
+                <Label Text =" Cookies"
+       FontAttributes="Bold"></Label>
+
+                <Label Text="Our websites and mobile applications may use technology called cookies.A cookie is a small text file that is placed on your hard disk by a server. Cookies allow our websites and mobile applications to respond to you as an individual. The website or mobile application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.
+You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies or receive a warning before a cookie is stored if you prefer. Please refer to your Internet browser's instructions or help screen to learn more about these functions and to specify your cookie preferences.
+If you choose to decline cookies, you may not be able to fully experience the interactive features of our website."></Label>
+
+                <Label Text=" Links to other websites"
+       FontAttributes="Bold"></Label>
+
+                <Label Text =" Our website may from time to time provide links to or embed third party websites. This Privacy Statement does not apply to those websites. If you choose to enter such a linked site, you agree that we are not responsible for the availability of such websites and do not review or endorse and shall not be liable, directly or indirectly, for:"></Label>
+
+                <Label Text="how these websites treat your PI,
+the content of such websites,
+the use that others make of these websites.
+Please ensure you check the legal and privacy statements posted on each website or mobile application you access before entering any PI."></Label>
+
+                <Label Text="Changes"
+       FontAttributes="Bold"></Label>
+
+<Label Text=" We may occasionally update this Privacy Statement. If the changes we make are material, we also may post a notice regarding the changes on our website. We encourage you to periodically review this Privacy Statement to stay informed about how we are helping to protect the PI we collect."/>
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

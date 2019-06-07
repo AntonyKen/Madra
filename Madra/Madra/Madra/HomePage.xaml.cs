@@ -96,5 +96,10 @@ namespace Madra
         {
             await Navigation.PushAsync(new Events());
         }
+
+        private async void logoButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Privacy());
+        }
     }
 }
