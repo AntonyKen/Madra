@@ -93,10 +93,6 @@
                     BackgroundColor="#3D75AB"
                     Clicked="continueButton"/>
 
-            <Label Text="Help" 
-                   HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
-                   Grid.Row="10" Grid.Column="3"/>
             
         </Grid>
     </ScrollView>

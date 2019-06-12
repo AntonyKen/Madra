@@ -82,11 +82,6 @@ namespace Madra
             
         }
 
-        private async void forgotButton(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ResetPassword());
-        }
-
         public static void setUser(string userEmail)
         {
             UserSettings.Email = userEmail;

@@ -91,11 +91,6 @@
                     BackgroundColor="#3D75AB"
                     Clicked="logoutButton"/>
 
-            <Label Text="Help" 
-                   HorizontalOptions="Center"
-                   TextColor="#FFFFFF"
-                   Grid.Row="12" Grid.Column="3" />
-
             <Button Text="Delete Account" 
                     TextColor="#FFFFFF"
                     BackgroundColor="#3D75AB"
