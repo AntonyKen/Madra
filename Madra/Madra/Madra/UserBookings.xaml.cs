@@ -125,26 +125,26 @@ namespace Madra
                 Dictionary<string, string> valuesName = valueName[0];
                 string firName = valuesName["first_name"];
 
-                //MailMessage mail = new MailMessage();
-                //SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                //SmtpServer.Timeout = 10000;
+                SmtpServer.Timeout = 10000;
 
-                //mail.From = new MailAddress("sean96kennedy@gmail.com");
-                //mail.To.Add("a.kennedy42@nuigalway.ie");
-                //mail.Subject = "Booking Cancelled";
-                //mail.Body = "Hi " + firName + "," + "\r\n\r\nYou have successfully cancelled your booking scheduled for " + bookingdate + " at " + bookingtime + "." +
-                //            "\r\n\r\nWe hope to see you soon some other day." +
-                //            "\r\n\r\nRegards," +
-                //            "\r\n\r\nMadra";
+                mail.From = new MailAddress("sean96kennedy@gmail.com");
+                mail.To.Add("a.kennedy42@nuigalway.ie");
+                mail.Subject = "Booking Cancelled";
+                mail.Body = "Hi " + firName + "," + "\r\n\r\nYou have successfully cancelled your booking scheduled for " + bookingdate + " at " + bookingtime + "." +
+                            "\r\n\r\nWe hope to see you soon some other day." +
+                            "\r\n\r\nRegards," +
+                            "\r\n\r\nMadra";
 
-                //SmtpServer.Port = 587;
-                //SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "*******"); // password here
-                //SmtpServer.EnableSsl = true;
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "*******"); // password here
+                SmtpServer.EnableSsl = true;
 
-                //SmtpServer.Send(mail);
+                SmtpServer.Send(mail);
 
-                //await DisplayAlert("Cancelled!", "An email confirming your cancellation has been sent to you.", "Okay");
+                await DisplayAlert("Cancelled!", "An email confirming your cancellation has been sent to you.", "Okay");
 
                 bookingsView.Children.Clear();
 

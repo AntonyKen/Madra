@@ -91,22 +91,23 @@ namespace Madra
                     MailMessage mail = new MailMessage();
                     SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                    SmtpServer.Timeout = 10000;
+                     SmtpServer.Timeout = 10000;
 
                     mail.From = new MailAddress("sean96kennedy@gmail.com");
                     mail.To.Add("a.kennedy42@nuigalway.ie");
                     mail.Subject = "Booking Confirmed";
-                    mail.Body = "Hi " + firstName + "," + "\r\n\r\nThank you for booking.\r\n\r\nPlase find below the details of your booking." +
+                    mail.Body = "Hi " + firstName + "," + "\r\n\r\nThank you for booking.\r\n\r\nPlease find below the details of your booking." +
                                 "\r\n\r\nDate: " + Booking.selectedDate +
                                 "\r\nTime: " + Booking.newTime +
                                 "\r\nAttendees: " + numberAttending.Text +
                                 "\r\nChildren below 16: " + age.SelectedItem +
+                                "\r\nNumber of children below 16" + under16.Text +
                                 "\r\n\r\nWe look forward to seeing you." +
                                 "\r\n\r\nRegards," +
                                 "\r\n\r\nMadra";
 
                     SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "*******"); // password here
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("sean96kennedy@gmail.com", "*****"); // password here
                     SmtpServer.EnableSsl = true;
 
                     SmtpServer.Send(mail);
