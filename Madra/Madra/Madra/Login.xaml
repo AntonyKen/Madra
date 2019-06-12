@@ -73,10 +73,6 @@
                     BackgroundColor="#FFF"
                     Clicked="loginButton"/>
 
-            <Label Text="Help" 
-                   TextColor="#FFFFFF"
-                   Grid.Row="8" Grid.Column="3" />
-
             <!--<Button Text="Forgot Password"
                     BackgroundColor="#FFFFFF"
                     Grid.Row="9" Grid.Column="1"
