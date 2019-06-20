@@ -19,7 +19,8 @@
         <Button Text="Profile"                    
                 Clicked="userProfileButton"
                 HorizontalOptions="End"
-                BackgroundColor="#24527B"/>
+                BackgroundColor="#24527B"
+                TextColor="White"/>
         <Button Text ="Walking" Clicked="bookButton"
                 HorizontalOptions="Center"
                 CornerRadius="50"/>
